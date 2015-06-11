@@ -1,0 +1,160 @@
+ #Register {
+halign:center;
+height:500;
+width:fill;
+layout:vbox;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+width:fill;
+background:#F5F5F5;
+layout:vbox;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+width:0;
+font-family:default;
+valign:center;
+}
+ #wloginpanel {
+halign:center;
+height:fill;
+layout:vbox;
+background:#f2f2f2;
+width:fill;
+valign:TOP;
+}
+ #wmailtext {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:10;
+background-image:textboxbg.png;
+}
+ #wusertext {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
+ #panel0 {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #togglebuttongroup0 {
+halign:CENTER;
+height:44;
+layout:hbox;
+width:88;
+valign:top;
+}
+ #togglebutton0 {
+halign:center;
+height:42.0;
+background-image-off:label_4_left;
+width:44.0;
+valign:center;
+background-image-on:label_4_left_touch;
+}
+ #togglebutton1 {
+halign:center;
+height:42.0;
+background-image-off:label_4_right;
+width:44.0;
+valign:center;
+background-image-on:label_4_right_touch;
+}
+ #wpasstext {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
+ #textbox2 {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
+ #textbox0 {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
+ #wregisterbutton {
+border-bottom-width:1;
+halign:center;
+border-radius:10;
+width:fill;
+border-bottom-color:#f7931e;
+border-top-width:1;
+margin-right:10;
+border-top-color:#f7931e;
+border-left-color:#f7931e;
+height:44;
+color:#ffffff;
+border-right-color:#f7931e;
+background:#f7931e;
+font-size:20;
+margin-left:10;
+border-right-width:1;
+font-family:default;
+margin-top:20;
+valign:center;
+border-left-width:1;
+}

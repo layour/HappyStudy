@@ -1,0 +1,93 @@
+ #OpinionDetail {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+padding-left:20;
+halign:left;
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #listviewdefine0 {
+halign:center;
+height:0;
+weight:1;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+halign:center;
+height:60;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel1 {
+halign:left;
+height:0;
+weight:1;
+layout:vbox;
+background:#FFFFFF;
+width:fill;
+valign:CENTER;
+}
+ #label1 {
+margin-right:10;
+halign:left;
+height:0;
+weight:1;
+color:#000000;
+font-size:14;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+valign:top;
+}
+ #label2 {
+margin-right:10;
+halign:right;
+height:wrap;
+color:#c0c0c0;
+heightWrap:15.0;
+font-size:10;
+width:fill;
+margin-left:10;
+margin-bottom:5;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+halign:CENTER;
+height:1;
+background:#c7c7c7;
+layout:hbox;
+width:fill;
+valign:top;
+}

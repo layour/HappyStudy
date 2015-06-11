@@ -1,0 +1,23 @@
+ #WelcomePage {
+halign:center;
+height:fill;
+width:fill;
+layout:vbox;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+width:fill;
+background:#F5F5F5;
+layout:vbox;
+}
+ #panel0 {
+height:fill;
+width:fill;
+layout:hbox;
+valign:center;
+}
+ #image0 {
+height:fill;
+width:fill;
+}

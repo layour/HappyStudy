@@ -1,0 +1,456 @@
+ #ExerciseTopic {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+background:#F5F5F5;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+height:56;
+}
+ #button0 {
+padding-left:20;
+halign:left;
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #imagebutton0 {
+icon-height:32;
+halign:center;
+height:55;
+color:#FFFFFF;
+font-size:12;
+width:55;
+icon-background-image:icon_questions.png;
+icon-width:32;
+font-family:default;
+valign:center;
+icon-text-spacing:0;
+}
+ #imagebutton1 {
+icon-height:32;
+halign:center;
+height:55;
+color:#FFFFFF;
+font-size:12;
+width:55;
+icon-background-image:icon_database.png;
+icon-width:32;
+font-family:default;
+valign:center;
+icon-text-spacing:0;
+}
+ #imagebutton2 {
+icon-height:32;
+halign:center;
+height:55;
+color:#FFFFFF;
+font-size:12;
+width:55;
+icon-background-image:icon_heart.png;
+icon-width:32;
+font-family:default;
+valign:center;
+icon-text-spacing:0;
+}
+ #flipperdefine0 {
+halign:center;
+height:0;
+weight:1;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #label6 {
+halign:left;
+width:fill;
+margin-bottom:10;
+margin-right:15;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:20;
+valign:top;
+}
+ #panel7 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+valign:center;
+}
+ #checkbox4 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label7 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel8 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox5 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label8 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel9 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox6 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label9 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel10 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox7 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label10 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel1 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #label1 {
+halign:left;
+width:fill;
+margin-bottom:10;
+margin-right:15;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:20;
+valign:top;
+}
+ #panel3 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+valign:center;
+}
+ #checkbox0 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label2 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel4 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox1 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label3 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel5 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox2 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label4 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel6 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox3 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label5 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #label11 {
+halign:left;
+width:fill;
+margin-bottom:10;
+margin-right:15;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:20;
+valign:top;
+}
+ #panel11 {
+margin-right:10;
+halign:LEFT;
+height:wrap;
+heightWrap:44.0;
+layout:hbox;
+width:fill;
+margin-left:10;
+valign:center;
+}
+ #checkbox8 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label12 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel12 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox9 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label13 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel13 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox10 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label14 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel14 {
+margin-right:10;
+halign:LEFT;
+height:44;
+layout:hbox;
+width:fill;
+margin-left:10;
+margin-top:5;
+valign:center;
+}
+ #checkbox11 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
+}
+ #label15 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:44.0;
+font-size:16;
+width:fill;
+font-family:default;
+valign:center;
+}

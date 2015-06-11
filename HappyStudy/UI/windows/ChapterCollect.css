@@ -1,0 +1,127 @@
+ #ChapterCollect {
+halign:center;
+height:fill;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #viewPage0 {
+halign:center;
+height:fill;
+layout:vbox;
+background:#F5F5F5;
+width:fill;
+valign:TOP;
+}
+ #navigatorbar0 {
+halign:LEFT;
+}
+ #button0 {
+padding-left:20;
+halign:left;
+height:44;
+width:44;
+background-image:icon_back.png;
+}
+ #label0 {
+halign:center;
+height:fill;
+weight:1;
+color:#000000;
+font-size:14;
+width:0;
+font-family:default;
+valign:center;
+}
+ #button1 {
+halign:center;
+height:44;
+color:#ffffff;
+font-size:14;
+background:#00a1ea;
+width:44;
+font-family:default;
+valign:center;
+}
+ #listviewdefine0 {
+halign:center;
+height:0;
+weight:1;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel0 {
+halign:center;
+height:60.0;
+layout:vbox;
+width:fill;
+valign:TOP;
+}
+ #panel1 {
+halign:LEFT;
+height:0;
+weight:1;
+layout:hbox;
+background:#FFFFFF;
+width:fill;
+valign:center;
+}
+ #label3 {
+border-bottom-width:1;
+halign:center;
+border-radius:5;
+width:36;
+border-bottom-color:#16CFB2;
+border-top-width:1;
+margin-right:10;
+border-top-color:#16CFB2;
+border-left-color:#16CFB2;
+height:36;
+color:#FFFFFF;
+border-right-color:#16CFB2;
+background:#16CFB2;
+font-size:18;
+margin-left:20;
+border-right-width:1;
+font-family:default;
+valign:center;
+border-left-width:1;
+}
+ #panel3 {
+margin-right:20;
+halign:center;
+height:fill;
+weight:1;
+layout:vbox;
+width:0;
+valign:CENTER;
+}
+ #label1 {
+halign:left;
+height:wrap;
+color:#000000;
+heightWrap:24.0;
+font-size:18;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #label2 {
+halign:left;
+height:wrap;
+color:#c0c0c0;
+heightWrap:18.0;
+font-size:12;
+width:fill;
+font-family:default;
+valign:center;
+}
+ #panel2 {
+halign:CENTER;
+height:1;
+background:#c7c7c7;
+layout:hbox;
+width:fill;
+valign:top;
+}
