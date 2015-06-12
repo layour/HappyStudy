@@ -1,11 +1,11 @@
 //JavaScript Framework 2.0 Code
 try{
-Type.registerNamespace('com.layou.study.ClockingInController');
-com.layou.study.ClockingInController = function() {
-    com.layou.study.ClockingInController.initializeBase(this);
+Type.registerNamespace('com.layou.study.LoginController');
+com.layou.study.LoginController = function() {
+    com.layou.study.LoginController.initializeBase(this);
     this.initialize();
 }
-function com$layou$study$ClockingInController$initialize(){
+function com$layou$study$LoginController$initialize(){
     //you can programing by $ctx API
     //get the context data through $ctx.get()
     //set the context data through $ctx.push(json)
@@ -32,34 +32,53 @@ function com$layou$study$ClockingInController$initialize(){
     
 }
     
-function com$layou$study$ClockingInController$evaljs(js){
+function com$layou$study$LoginController$evaljs(js){
     eval(js)
 }
-function com$layou$study$ClockingInController$closeClockingIn(sender, args){
-	$view.close();
+function com$layou$study$LoginController$openRegister(sender, args){
+	$view.open({
+		"viewid" : "com.layou.study.Register",//目标页面（首字母大写）全名，
+		"isKeep" : "true"
+	});
 }
-function com$layou$study$ClockingInController$clockingIn(sender, args){
-	com.layou.study.GlobalFunction.clockingIn();
-}
-function com$layou$study$ClockingInController$clockingInLoad(sender, args){
+function com$layou$study$LoginController$login(sender, args){
+	var usercode = $id("wusertext").getAttribute("value");
+	var password = $id("wpasstext").getAttribute("value");
+	if(com.layou.study.GlobalUtil.isEmptyString(usercode)){
+		$toast("手机号不能为空");
+		return;
+	} else if(usercode.length != 11){
+		$toast("手机号长度必需是11位");
+		return;
+	}
+	if(com.layou.study.GlobalUtil.isEmptyString(password)){
+		$toast("密码不能为空");
+		return;
+	}
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/list?page.size=10",
-		"callback" : "checkInCallback()",
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/login?loginName="+usercode+"&loginPwd=" + password,
+		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
-function checkInCallback(){
+function loginCallBack(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
 	result = $stringToJSON(result);//将字符串转换成JSON对象
-	$ctx.put("list",result.rows);
-	$ctx.dataBind();
+	if('0' == result.code){
+		$toast("登录成功");
+		$view.open({
+			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
+			"isKeep" : "false"
+		});
+	} else if('1' == result.code){
+		$toast("用户名或密码错误");
+	}
 }
-com.layou.study.ClockingInController.prototype = {
-    clockingInLoad : com$layou$study$ClockingInController$clockingInLoad,
-    clockingIn : com$layou$study$ClockingInController$clockingIn,
-    closeClockingIn : com$layou$study$ClockingInController$closeClockingIn,
-    initialize : com$layou$study$ClockingInController$initialize,
-    evaljs : com$layou$study$ClockingInController$evaljs
+com.layou.study.LoginController.prototype = {
+    login : com$layou$study$LoginController$login,
+    openRegister : com$layou$study$LoginController$openRegister,
+    initialize : com$layou$study$LoginController$initialize,
+    evaljs : com$layou$study$LoginController$evaljs
 };
-com.layou.study.ClockingInController.registerClass('com.layou.study.ClockingInController',UMP.UI.Mvc.Controller);
+com.layou.study.LoginController.registerClass('com.layou.study.LoginController',UMP.UI.Mvc.Controller);
 }catch(e){$e(e);}

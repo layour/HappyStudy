@@ -12,7 +12,6 @@
   <view id="ClockingIn" ref="ClockingIn.dsl" include="true"/>  
   <view id="Register" ref="Register.dsl" include="true"/>  
   <import id="twoDimensionCode" type="mobile" ref="component"/>  
-  <view id="TeamType" ref="TeamType.dsl" include="true"/>  
   <view id="OpinionTickling" ref="OpinionTickling.dsl" include="true"/>  
   <view id="OpinionDetail" ref="OpinionDetail.dsl" include="true"/>  
   <view id="SystemHelp" ref="SystemHelp.dsl" include="true"/>  
@@ -24,7 +23,8 @@
   <view id="ExamSelect" ref="ExamSelect.dsl" include="true"/>  
   <view id="ErrorTopic" ref="ErrorTopic.dsl" include="true"/>  
   <view id="ExamHistory" ref="ExamHistory.dsl" include="true"/>  
-  <view id="ExamHistoryTopic" ref="ExamHistoryTopic.dsl" include="true"/>
+  <view id="ExamHistoryTopic" ref="ExamHistoryTopic.dsl" include="true"/>  
+  <view id="Login" ref="Login.dsl" include="true"/> 
 </application>
 <!--
 【屏幕显示方向】

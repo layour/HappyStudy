@@ -40,7 +40,7 @@ function com$layou$study$WelcomePageController$panel0_onload(sender, args){
 }
 function hello(){
 	$view.open({
-		"viewid" : "com.layou.study.Register",//目标页面（首字母大写）全名，
+		"viewid" : "com.layou.study.Login",//目标页面（首字母大写）全名，
 		"isKeep" : "false"
 	});
 }

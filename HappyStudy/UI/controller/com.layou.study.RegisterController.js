@@ -40,11 +40,32 @@ function com$layou$study$RegisterController$closeRegister(sender, args){
 }
 function com$layou$study$RegisterController$nextJs(sender, args){
 	$view.open({
-		"viewid" : "com.layou.study.TeamType",//目标页面（首字母大写）全名，
+		"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
 		"isKeep" : "false"
 	});
 }
+function com$layou$study$RegisterController$loadTeamType(sender, args){
+	$service.get({
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/teamClass/list",
+		"callback" : "loadClassCallBack()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadClassCallBack(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	$alert(result);
+	$ctx.put("list",result.rows);
+	$ctx.dataBind();
+	var context={
+		citys:["合肥1","合肥2","合肥3","合肥4","合肥5","安庆","蚌埠","亳州","巢湖","池州","滁州","阜阳","淮北","淮南","黄山","六安","马鞍山","宿州","铜陵","芜湖","宣城"],
+		types:["职前班","考试辅导班","岗前班","步步高","加油站","冲锋班","部（课）衔训","导师技能提升班","研讨班"],
+		teams:[ "201501","201502","201503","201504","201505","201506","201507","201508","201509","201510","201511","201512"]
+	}
+	$ctx.push(context);//数据绑定,将context的值与picker进行绑定
+}
 com.layou.study.RegisterController.prototype = {
+    loadTeamType : com$layou$study$RegisterController$loadTeamType,
     nextJs : com$layou$study$RegisterController$nextJs,
     closeRegister : com$layou$study$RegisterController$closeRegister,
     initialize : com$layou$study$RegisterController$initialize,
