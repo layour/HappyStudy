@@ -13,8 +13,8 @@
         <listView id="listviewdefine0" bindfield="list" onload="this.clockingInLoad()">
             <div id="panel0">
                 <div id="panel1">
-                    <label id="label1" bindfield="time">2015-05-26 15:59:00</label>
-                    <label id="label2" bindfield="type">签到</label> 
+                    <label id="label1" bindfield="checkTime">2015-05-26 15:59:00</label>
+                    <label id="label2" bindfield="checkType">签到</label> 
                 </div>
                 <div id="panel2"/> 
             </div> 

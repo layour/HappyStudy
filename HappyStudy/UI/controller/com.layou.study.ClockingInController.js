@@ -42,31 +42,17 @@ function com$layou$study$ClockingInController$clockingIn(sender, args){
 	com.layou.study.GlobalFunction.clockingIn();
 }
 function com$layou$study$ClockingInController$clockingInLoad(sender, args){
-	var json = {
-		list : [{
-			time : "2015-05-26 15:34:00",
-			type : "签到"
-		}, {
-			time : "2015-05-27 15:34:00",
-			type : "补签"
-		}, {
-			time : "2015-05-28 15:34:00",
-			type : "补签"
-		}, {
-			time : "2015-05-29 15:34:00",
-			type : "签到"
-		}, {
-			time : "2015-05-30 15:34:00",
-			type : "签到"
-		}, {
-			time : "2015-05-31 15:34:00",
-			type : "签到"
-		}, {
-			time : "2015-06-01 15:34:00",
-			type : "签到"
-		}]
-	}
-	$ctx.push(json);
+	$service.get({
+		"url" : "http://10.2.112.76:8080/HappyStudyServer/checkIn/list?page.size=10",
+		"callback" : "checkInCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function checkInCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	$ctx.put("list",result.rows);
+	$ctx.dataBind();
 }
 com.layou.study.ClockingInController.prototype = {
     clockingInLoad : com$layou$study$ClockingInController$clockingInLoad,
