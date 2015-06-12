@@ -38,7 +38,7 @@ function com$layou$study$LoginController$evaljs(js){
 function com$layou$study$LoginController$openRegister(sender, args){
 	$view.open({
 		"viewid" : "com.layou.study.Register",//目标页面（首字母大写）全名，
-		"isKeep" : "true"
+		"isKeep" : "false"
 	});
 }
 function com$layou$study$LoginController$login(sender, args){
