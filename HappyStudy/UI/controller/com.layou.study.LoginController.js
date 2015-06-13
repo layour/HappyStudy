@@ -45,24 +45,28 @@ function com$layou$study$LoginController$login(sender, args){
 	var usercode = $id("wusertext").getAttribute("value");
 	var password = $id("wpasstext").getAttribute("value");
 	if(com.layou.study.GlobalUtil.isEmptyString(usercode)){
-		$toast("手机号不能为空");
+		$alert("手机号不能为空");
 		return;
 	} else if(usercode.length != 11){
-		$toast("手机号长度必需是11位");
+		$alert("手机号长度必需是11位");
 		return;
 	}
 	if(com.layou.study.GlobalUtil.isEmptyString(password)){
-		$toast("密码不能为空");
+		$alert("密码不能为空");
 		return;
 	}
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : "http://10.2.112.35:8080/HappyStudyServer/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
 function loginCallBack(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("登录超时");
+		return;
+	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
 		$toast("登录成功");
@@ -71,7 +75,7 @@ function loginCallBack(){
 			"isKeep" : "false"
 		});
 	} else if('1' == result.code){
-		$toast("用户名或密码错误");
+		$alert("用户名或密码错误");
 	}
 }
 com.layou.study.LoginController.prototype = {

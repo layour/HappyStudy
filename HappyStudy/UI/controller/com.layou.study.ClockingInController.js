@@ -43,7 +43,7 @@ function com$layou$study$ClockingInController$clockingIn(sender, args){
 }
 function com$layou$study$ClockingInController$clockingInLoad(sender, args){
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/list?page.size=10",
+		"url" : "http://10.2.112.35:8080/HappyStudyServer/checkIn/list?page.size=10",
 		"callback" : "checkInCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

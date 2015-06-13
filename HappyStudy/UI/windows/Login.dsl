@@ -5,6 +5,9 @@
     <link type="text/css" href="sys/theme.css"/>
     <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0">
+        <div id="panel0">
+            <label id="label0">快乐学</label> 
+        </div>
         <div id="wloginpanel">
             <div id="wuserpanel">
                 <image id="wuserimg" scaletype="fitcenter" src="fa_user.png"/>
@@ -14,15 +17,12 @@
                 <image id="wpassimg" scaletype="fitcenter" src="fa_password.png"/>
                 <input id="wpasstext" maxlength="256" placeholder="密码" type="password"/> 
             </div>
-            <div id="wautologinpanel">
-                <label id="wautologinlabel">自动登录</label>
-                <switch id="wautologinswitch" value="off"/> 
-            </div>
             <input id="wloginbutton" value="登录" class="buttonclass loginbuttonclass" onclick="this.login()" type="button"/>
             <div id="wotherpanel">
                 <label id="wregisterlabel" class="linklabelclass" onclick="this.openRegister()">立即注册</label>
                 <label id="wnouserloginlabel" class="linklabelclass">忘记密码</label> 
             </div> 
-        </div> 
+        </div>
+        <div id="panel1"/> 
     </div> 
 </window>

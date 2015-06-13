@@ -11,13 +11,32 @@ height:fill;
 width:fill;
 layout:vbox;
 valign:CENTER;
-background-image:sudoku_dandelionbg.png;
+background-image:contest_bg.png;
+}
+ #panel0 {
+halign:CENTER;
+height:0;
+weight:1;
+layout:hbox;
+width:fill;
+valign:center;
+}
+ #label0 {
+halign:center;
+height:wrap;
+widthWrap:75.0;
+color:#ffffff;
+heightWrap:32.0;
+font-size:24;
+width:wrap;
+font-family:default;
+valign:center;
 }
  #wloginpanel {
 halign:center;
-height:220;
+height:190;
 layout:vbox;
-background:#f2f2f2;
+background:#ffffff;
 width:fill;
 valign:TOP;
 }
@@ -34,14 +53,15 @@ background-image:textboxbg.png;
 }
  #wuserimg {
 height:44;
-width:48;
+width:44;
 }
  #wusertext {
 halign:LEFT;
 height:44;
+weight:1;
 color:#a6a6a6;
 font-size:14;
-width:fill;
+width:0;
 font-family:default;
 }
  #wpasspanel {
@@ -51,6 +71,8 @@ height:44;
 layout:hbox;
 width:fill;
 margin-left:10;
+margin-bottom:5;
+margin-top:5;
 valign:center;
 background-image:textboxbg.png;
 }
@@ -66,33 +88,6 @@ font-size:14;
 width:fill;
 font-family:default;
 }
- #wautologinpanel {
-margin-right:10;
-halign:LEFT;
-height:44;
-layout:hbox;
-width:fill;
-margin-left:10;
-valign:center;
-}
- #wautologinlabel {
-margin-right:5;
-halign:right;
-height:20.0;
-weight:1;
-color:#000000;
-font-size:14;
-width:0;
-font-family:default;
-valign:center;
-}
- #wautologinswitch {
-margin-right:7;
-height:32;
-background:#167ef8;
-width:51;
-background-image-dis:slideswitch;
-}
  #wloginbutton {
 border-bottom-width:1;
 border-radius:10;
@@ -107,6 +102,7 @@ border-right-color:#f7931e;
 background:#f7931e;
 margin-left:10;
 border-right-width:1;
+margin-top:5;
 border-left-width:1;
 }
  #wotherpanel {
@@ -132,5 +128,13 @@ halign:right;
 height:18.0;
 weight:1;
 width:0;
+valign:center;
+}
+ #panel1 {
+halign:LEFT;
+height:0;
+weight:1;
+layout:hbox;
+width:fill;
 valign:center;
 }
