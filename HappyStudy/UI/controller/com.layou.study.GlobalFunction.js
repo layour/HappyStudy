@@ -42,7 +42,6 @@ com.layou.study.GlobalFunction.checkInCallback = function(){
 	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
-		$ctx.setApp(result.user)
 		$toast("签到成功");
 		$view.open({
 			"viewid" : "com.layou.study.ClockingIn",//目标页面（首字母大写）全名，
