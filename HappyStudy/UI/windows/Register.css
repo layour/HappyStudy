@@ -1,6 +1,6 @@
  #Register {
 halign:center;
-height:600;
+height:650;
 width:fill;
 layout:vbox;
 valign:TOP;
@@ -8,9 +8,9 @@ valign:TOP;
  #viewPage0 {
 halign:center;
 height:fill;
-width:fill;
-background:#F5F5F5;
 layout:vbox;
+background:#F5F5F5;
+width:fill;
 valign:TOP;
 }
  #navigatorbar0 {
@@ -33,8 +33,8 @@ valign:center;
 halign:center;
 height:0;
 weight:1;
-layout:vbox;
 background:#f2f2f2;
+layout:vbox;
 width:fill;
 valign:TOP;
 }
@@ -51,6 +51,32 @@ font-family:default;
 margin-top:10;
 background-image:textboxbg.png;
 }
+ #textbox1 {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
+ #textbox3 {
+padding-left:24;
+margin-right:10;
+halign:LEFT;
+height:44;
+color:#167ef8;
+font-size:17;
+width:fill;
+margin-left:10;
+font-family:default;
+margin-top:5;
+background-image:textboxbg.png;
+}
  #wusertext {
 padding-left:24;
 margin-right:10;
@@ -65,7 +91,7 @@ margin-top:5;
 background-image:textboxbg.png;
 }
  #panel0 {
-padding-left:24;
+padding-left:15;
 margin-right:10;
 halign:LEFT;
 height:44;
@@ -75,28 +101,40 @@ margin-left:10;
 margin-top:5;
 valign:center;
 }
- #togglebuttongroup0 {
-halign:CENTER;
+ #checkbox0 {
 height:44;
-layout:hbox;
-width:88;
-valign:top;
+width:44;
+check-on-image:checkbox_select;
+check-off-image:checkbox_noselect;
 }
- #togglebutton0 {
+ #label1 {
 halign:center;
-height:42.0;
-background-image-off:label_4_left;
-width:44.0;
+height:wrap;
+widthWrap:15.0;
+color:#000000;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
 valign:center;
-background-image-on:label_4_left_touch;
 }
- #togglebutton1 {
+ #checkbox1 {
+height:44;
+width:44;
+check-on-image:checkbox_select;
+margin-left:20;
+check-off-image:checkbox_noselect;
+}
+ #label2 {
 halign:center;
-height:42.0;
-background-image-off:label_4_right;
-width:44.0;
+height:wrap;
+widthWrap:15.0;
+color:#000000;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
 valign:center;
-background-image-on:label_4_right_touch;
 }
  #wpasstext {
 padding-left:24;
@@ -149,6 +187,7 @@ border-bottom-width:1;
 halign:center;
 border-radius:10;
 width:fill;
+margin-bottom:50;
 border-bottom-color:#f7931e;
 border-top-width:1;
 margin-right:10;

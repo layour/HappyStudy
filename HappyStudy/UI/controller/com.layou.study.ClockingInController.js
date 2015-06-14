@@ -43,12 +43,12 @@ function com$layou$study$ClockingInController$clockingIn(sender, args){
 }
 function com$layou$study$ClockingInController$clockingInLoad(sender, args){
 	$service.get({
-		"url" : "http://10.2.112.35:8080/HappyStudyServer/checkIn/list?page.size=10",
-		"callback" : "checkInCallback()",
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/list?page.size=10",
+		"callback" : "loadCheckCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
-function checkInCallback(){
+function loadCheckCallback(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	$ctx.put("list",result.rows);

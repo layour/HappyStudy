@@ -56,7 +56,7 @@ function com$layou$study$LoginController$login(sender, args){
 		return;
 	}
 	$service.get({
-		"url" : "http://10.2.112.35:8080/HappyStudyServer/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -69,6 +69,7 @@ function loginCallBack(){
 	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
+		$ctx.setApp(result.user)
 		$toast("登录成功");
 		$view.open({
 			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，

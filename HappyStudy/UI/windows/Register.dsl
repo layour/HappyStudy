@@ -3,6 +3,7 @@
 <window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="Register" controller="RegisterController" namespace="com.layou.study">
     <import ref="Register.css" type="css"/>
     <link type="text/css" href="sys/theme.css"/>
+    <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0">
         <navigatorbar id="navigatorbar0" title="注册" class="navigatorbarclass">
             <input id="button0" class="buttonclass" onclick="this.closeRegister()" type="button"/>
@@ -11,12 +12,14 @@
         <Scrollview id="Scrollview_wloginpanel" width="fill" hScrollEnabled="disabled">
             <div id="wloginpanel">
                 <input id="wmailtext" maxlength="256" placeholder="手机号" type="text"/>
+                <input id="textbox1" maxlength="256" placeholder="密码" type="password"/>
+                <input id="textbox3" maxlength="256" placeholder="确认密码" type="password"/>
                 <input id="wusertext" maxlength="256" placeholder="姓名" type="text"/>
                 <div id="panel0">
-                    <toggleButtonGroup id="togglebuttongroup0">
-                        <toggleButton id="togglebutton0" value="0" class="togglebtnitemclass" textOff="男" textOn="男" type="button" checked="true"/>
-                        <toggleButton id="togglebutton1" value="1" class="togglebtnitemclass" textOff="女" textOn="女" type="button"/> 
-                    </toggleButtonGroup> 
+                    <input id="checkbox0" type="checkbox" checked="checked" onchange="this.selectMale()"/>
+                    <label id="label1">男</label>
+                    <input id="checkbox1" type="checkbox" onchange="this.selectWoman()"/>
+                    <label id="label2">女</label> 
                 </div>
                 <input id="wpasstext" maxlength="256" placeholder="身份证号" type="text"/>
                 <input id="textbox2" maxlength="256" placeholder="推荐人工号" type="text"/>

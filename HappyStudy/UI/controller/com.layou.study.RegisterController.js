@@ -39,11 +39,23 @@ function com$layou$study$RegisterController$closeRegister(sender, args){
 	$view.close();
 }
 function com$layou$study$RegisterController$nextJs(sender, args){
-	var phoneNo = $id("wmailtext").getAttribute("value");
-	var userName = $id("wusertext").getAttribute("value");
-	var userNo = $id("wpasstext").getAttribute("value");
-	var referrerNo = $id("textbox2").getAttribute("value");
-	var referrerPhoneNo = $id("textbox0").getAttribute("value");
+	var phoneNo = $id("wmailtext").getAttribute("value");//手机号
+	var password = $id("textbox1").getAttribute("value");//密码
+	var repassword = $id("textbox3").getAttribute("value");//确认密码
+	var userName = $id("wusertext").getAttribute("value");//姓名
+	var sex = "男";//性别
+	if($id("checkbox1").getAttribute("checked")){
+		sex = "女";
+	}
+	var idNo = $id("wpasstext").getAttribute("value");//身份证号
+	var referrerNo = $id("textbox2").getAttribute("value");//推荐人工号
+	var referrerPhoneNo = $id("textbox0").getAttribute("value");//推荐人手机号
+	$ctx.dataCollect();//数据收集
+	var city = $ctx.getString("city");//城市
+	var teamType = $ctx.getString("type");//班型
+	var role = "普通用户";//角色
+	var teamClass = $ctx.getString("team");//班级
+	//手机号校验
 	if(com.layou.study.GlobalUtil.isEmptyString(phoneNo)){
 		$alert("手机号不能为空");
 		return;
@@ -51,40 +63,70 @@ function com$layou$study$RegisterController$nextJs(sender, args){
 		$alert("手机号长度必需是11位");
 		return;
 	}
+	//密码校验
+	if(com.layou.study.GlobalUtil.isEmptyString(password)){
+		$alert("密码不能为空");
+		return;
+	}
+	//确认密码校验
+	if(com.layou.study.GlobalUtil.isEmptyString(repassword)){
+		$alert("确认密码不能为空");
+		return;
+	} else if(password != repassword){
+		$alert("密码和确认密码不一致");
+		return;
+	}
+	//姓名校验
 	if(com.layou.study.GlobalUtil.isEmptyString(userName)){
 		$alert("姓名不能为空");
 		return;
 	}
-	if(com.layou.study.GlobalUtil.isEmptyString(userNo)){
+	//身份证号校验
+	if(com.layou.study.GlobalUtil.isEmptyString(idNo)){
 		$alert("身份证号不能为空");
 		return;
-	} else if(userNo.length != 18 || userNo.length != 15){
-		$alert("身份证号长度必需是11位");
+	} else if(idNo.length != 18 && idNo.length != 15){
+		$alert("身份证号长度必需是15位或18位");
 		return;
 	}
+	//推荐人工号校验
 	if(com.layou.study.GlobalUtil.isEmptyString(referrerNo)){
 		$alert("推荐人工号不能为空");
 		return;
 	}
+	//推荐人手机号校验
 	if(com.layou.study.GlobalUtil.isEmptyString(referrerPhoneNo)){
 		$alert("推荐人手机号不能为空");
 		return;
+	} else if(referrerPhoneNo.length != 11){
+		$alert("推荐人手机号长度必需是11位");
+		return;
 	}
-	$service.get({
-		"url" : "http://10.2.112.35:8080/HappyStudyServer/user/save",
+	var params = "?phoneNo=" + phoneNo + "&password=" + password + "&userName=" + userName + "&sex=" + sex + "&idNo=" + idNo + "&referrerNo=" + referrerNo + "&referrerPhoneNo=" + referrerPhoneNo + "&city=" + city + "&teamType=" + teamType + "&role=" + role + "&teamClass=" + teamClass  
+	$service.post({
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/user/mobileSave" + params,
 		"callback" : "registerCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
 function registerCallBack(){
-	$view.open({
-		"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
-		"isKeep" : "false"
-	});
+	var result = $ctx.param("result");
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("注册超时");
+		return;
+	}
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	if(result.code == "0"){
+		$toast("注册成功");
+		$view.open({
+			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
+			"isKeep" : "false"
+		});
+	}
 }
 function com$layou$study$RegisterController$loadTeamType(sender, args){
 	$service.get({
-		"url" : "http://10.2.112.35:8080/HappyStudyServer/teamClass/list",
+		"url" : "http://192.168.1.105:8080/HappyStudyServer/teamClass/list",
 		"callback" : "loadClassCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -103,7 +145,25 @@ function loadClassCallBack(){
 	}
 	$ctx.push(context);//数据绑定,将context的值与picker进行绑定
 }
+function com$layou$study$RegisterController$selectMale(sender, args){
+	var selectMale = $id("checkbox0").getAttribute("checked");
+	if(selectMale == "true"){
+		$id("checkbox1").setAttribute("checked", "false");
+	} else {
+		$id("checkbox0").setAttribute("checked", "true");
+	}
+}
+function com$layou$study$RegisterController$selectWoman(sender, args){
+	var selectWoman = $id("checkbox1").getAttribute("checked");
+	if(selectWoman == "true"){
+		$id("checkbox0").setAttribute("checked", "false");
+	} else {
+		$id("checkbox1").setAttribute("checked", "true");
+	}
+}
 com.layou.study.RegisterController.prototype = {
+    selectWoman : com$layou$study$RegisterController$selectWoman,
+    selectMale : com$layou$study$RegisterController$selectMale,
     loadTeamType : com$layou$study$RegisterController$loadTeamType,
     nextJs : com$layou$study$RegisterController$nextJs,
     closeRegister : com$layou$study$RegisterController$closeRegister,
