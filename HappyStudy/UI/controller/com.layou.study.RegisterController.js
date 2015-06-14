@@ -122,6 +122,8 @@ function registerCallBack(){
 			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
 			"isKeep" : "false"
 		});
+	} else {
+		$alert("注册失败");
 	}
 }
 function com$layou$study$RegisterController$loadTeamType(sender, args){

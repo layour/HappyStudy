@@ -27,7 +27,7 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	var checkType = "签到";
 	var userId = $ctx.getApp("userId");
 	
-	var params = "?checkAddr=" + checkAddr + "&checkType=" + checkType + "&userId=" + userId;
+	var params = "?checkTime=" + data + "&checkAddr=" + checkAddr + "&checkType=" + checkType + "&userId=" + userId;
 	$service.get({
 		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/mobileSave" + params,
 		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
@@ -49,6 +49,8 @@ com.layou.study.GlobalFunction.checkInCallback = function(){
 			"isKeep" : "false"
 		});
 	} else if('1' == result.code){
+		$alert("签到日期错误");
+	} else {
 		$alert("签到失败");
 	}
 }
