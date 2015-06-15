@@ -36,8 +36,8 @@ valign:center;
  #panel0 {
 halign:center;
 height:180;
-background:#00a1ea;
 layout:vbox;
+background:#00a1ea;
 width:fill;
 valign:CENTER;
 }
@@ -75,8 +75,8 @@ margin-top:5;
 valign:center;
 }
  #panel1 {
-padding-left:10;
 padding-right:10;
+padding-left:10;
 halign:LEFT;
 height:60;
 layout:hbox;
@@ -104,8 +104,8 @@ height:44;
 width:44;
 }
  #panel2 {
-padding-right:10;
 padding-left:10;
+padding-right:10;
 halign:LEFT;
 height:60;
 layout:hbox;
@@ -133,8 +133,8 @@ height:44;
 width:44;
 }
  #panel3 {
-padding-right:10;
 padding-left:10;
+padding-right:10;
 halign:LEFT;
 height:60;
 layout:hbox;

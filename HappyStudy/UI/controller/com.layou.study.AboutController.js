@@ -56,7 +56,15 @@ function com$layou$study$AboutController$openAboutSystem(sender, args){
 		"isKeep" : "true"
 	});
 }
+function com$layou$study$AboutController$loadUserInfo(sender, args){
+	var userName = $ctx.getApp("userName");
+	var teamType = $ctx.getApp("teamType");
+	var teamClass = $ctx.getApp("teamClass");
+	$id("label4").setAttribute("value", userName);
+	$id("label5").setAttribute("value", teamType + "-" + teamClass);
+}
 com.layou.study.AboutController.prototype = {
+    loadUserInfo : com$layou$study$AboutController$loadUserInfo,
     openAboutSystem : com$layou$study$AboutController$openAboutSystem,
     openSystemHelp : com$layou$study$AboutController$openSystemHelp,
     enterOpinionTickling : com$layou$study$AboutController$enterOpinionTickling,

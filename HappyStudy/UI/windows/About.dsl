@@ -8,7 +8,7 @@
             <input id="button0" class="ngbbuttonclass" onclick="this.closeAbout()" type="button"/>
             <label id="label0"/> 
         </navigatorbar>
-        <div id="panel0">
+        <div id="panel0" onload="this.loadUserInfo()">
             <input id="imagebutton0" imagebuttontype="icon" value="图标名称" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false"/>
             <label id="label4">张三</label>
             <label id="label5">岗前班-201512</label> 

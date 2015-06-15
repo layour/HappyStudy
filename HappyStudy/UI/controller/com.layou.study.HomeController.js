@@ -54,7 +54,23 @@ function com$layou$study$HomeController$openAbout(sender, args){
 	});
 }
 function com$layou$study$HomeController$addBackEvent(sender, args){
+	//设置退出提示
 	$js.backConfirm();
+	//获取位置信息
+	$device.getLocation({
+		"bindfield" : "location", //位置信息回写的绑定字段
+		"callback" : function(){
+			$alert($ctx.getString("location"));
+			/*$ctx.setApp({"a":"x",
+				"b":"#{plug.x}",
+				"c":"#{name}",
+				"d":"#{cursor.x}"
+			})*/
+		},
+		"single" : "true", //是否只获取1次
+		"isgetaddress" : "true", //是否需要获取地址
+		"network" : "false" //是否使用wifi定位
+	})
 }
 function com$layou$study$HomeController$clockingIn(sender, args){
 	com.layou.study.GlobalFunction.clockingIn();

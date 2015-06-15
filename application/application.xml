@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<application id="HappyStudy" appname="HappyStudy" versionCode="1" versionName="1" icon="app" jsengine="v2.0" push_enable="false">
-  <permission id="internet"/>
-  <components>
-    <component name="HappyStudy" start="true"/>
-  </components>
+<application id="HappyStudy" appname="HappyStudy" versionCode="1" versionName="1" icon="app" jsengine="v2.0" push_enable="false"> 
+  <permission id="internet"/>  
+  <components> 
+    <component name="HappyStudy" start="true"/> 
+  </components>  
+  <import id="gaodeMap" type="mobile" ref="component"/>
   <import id="twoDimensionCode" type="mobile" ref="component"/>
 </application>

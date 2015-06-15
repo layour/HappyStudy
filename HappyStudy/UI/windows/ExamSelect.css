@@ -71,45 +71,38 @@ margin-bottom:10;
 font-family:default;
 valign:center;
 }
- #label2 {
-halign:left;
-height:wrap;
-color:#FFFFFF;
-heightWrap:20.0;
-font-size:14;
-width:190;
-font-family:default;
-valign:top;
-}
  #label3 {
-halign:left;
+halign:center;
 height:wrap;
+widthWrap:320.0;
 color:#FFFFFF;
 heightWrap:20.0;
 font-size:14;
-width:190;
+width:wrap;
 font-family:default;
 margin-top:40;
 valign:top;
 }
  #label4 {
-halign:left;
+halign:center;
 height:wrap;
+widthWrap:320.0;
 color:#FFFFFF;
 heightWrap:20.0;
 font-size:14;
-width:190;
+width:wrap;
 font-family:default;
 margin-top:15;
 valign:top;
 }
  #label5 {
-halign:left;
+halign:center;
 height:wrap;
+widthWrap:320.0;
 color:#FFFFFF;
 heightWrap:20.0;
 font-size:14;
-width:190;
+width:wrap;
 font-family:default;
 margin-top:15;
 valign:top;
@@ -135,4 +128,15 @@ font-family:default;
 margin-top:40;
 valign:center;
 border-left-width:1;
+}
+ #label2 {
+halign:center;
+height:wrap;
+widthWrap:320.0;
+color:#FFFFFF;
+heightWrap:20.0;
+font-size:14;
+width:wrap;
+font-family:default;
+valign:top;
 }

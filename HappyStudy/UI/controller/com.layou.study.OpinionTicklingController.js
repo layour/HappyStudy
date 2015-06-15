@@ -59,7 +59,7 @@ function com$layou$study$OpinionTicklingController$addOpinion(sender, args){
 	var params = "?opinionDesc=" + opinionDesc + "&contactInfo=" + contactInfo + "&userId=" + userId;
 	//params = $js.urlEncode(params);
 	$service.get({
-		"url" : "http://10.2.112.42:8080/HappyStudyServer/opinion/mobileSave" + params,
+		"url" : "http://10.2.112.33:8080/HappyStudyServer/opinion/mobileSave" + params,
 		"callback" : "opioionCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

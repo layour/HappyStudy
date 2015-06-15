@@ -50,7 +50,15 @@ function com$layou$study$ExamSelectController$openExamHistory(sender, args){
 		"isKeep" : "true"
 	});
 }
+function com$layou$study$ExamSelectController$loadUserInfo(sender, args){
+	var userName = $ctx.getApp("userName");
+	var teamType = $ctx.getApp("teamType");
+	var teamClass = $ctx.getApp("teamClass");
+	$id("label1").setAttribute("value", userName);
+	$id("label2").setAttribute("value", teamType + "-" + teamClass + " | 中国平安培训");
+}
 com.layou.study.ExamSelectController.prototype = {
+    loadUserInfo : com$layou$study$ExamSelectController$loadUserInfo,
     openExamHistory : com$layou$study$ExamSelectController$openExamHistory,
     enterExamTopic : com$layou$study$ExamSelectController$enterExamTopic,
     closeExamSelect : com$layou$study$ExamSelectController$closeExamSelect,
