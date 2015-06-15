@@ -42,8 +42,9 @@ function com$layou$study$ClockingInController$clockingIn(sender, args){
 	com.layou.study.GlobalFunction.clockingIn();
 }
 function com$layou$study$ClockingInController$clockingInLoad(sender, args){
+	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/list?page.size=10",
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/checkIn/list?page.size=20&search_userId=" + userId,
 		"callback" : "loadCheckCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

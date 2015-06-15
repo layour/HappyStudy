@@ -28,11 +28,17 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	var userId = $ctx.getApp("userId");
 	
 	var params = "?checkTime=" + data + "&checkAddr=" + checkAddr + "&checkType=" + checkType + "&userId=" + userId;
+	//params = $js.urlEncode(params);
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/checkIn/mobileSave" + params,
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/checkIn/mobileSave" + params,
 		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
+	/*$service.call("UMService.post", {
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/checkIn/mobileSave" + params,
+		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	}, false);*/
 }
 com.layou.study.GlobalFunction.checkInCallback = function(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取

@@ -4,6 +4,7 @@
     <import ref="Home.css" type="css"/>
     <link type="text/css" href="sys/theme.css"/>
     <script src="#{path.controller}/com.layou.study.GlobalFunction.js" type="text/javascript"/>
+    <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0" onload="this.addBackEvent()">
         <navigatorbar id="navigatorbar0" title="快乐学" class="navigatorbarclass">
             <label id="label0"/>

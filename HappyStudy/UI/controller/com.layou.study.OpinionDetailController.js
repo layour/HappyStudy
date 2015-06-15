@@ -39,25 +39,18 @@ function com$layou$study$OpinionDetailController$closeOpinionDetail(sender, args
 	$view.close();
 }
 function com$layou$study$OpinionDetailController$loadOpinion(sender, args){
-	var json = {
-		list : [{
-			time : "2015-05-26 15:34:00",
-			content : "签到功能非常好用"
-		}, {
-			time : "2015-05-27 15:34:00",
-			content : "这个应用太好了"
-		}, {
-			time : "2015-05-28 15:34:00",
-			content : "这个应用太好了"
-		}, {
-			time : "2015-05-29 15:34:00",
-			content : "签到功能非常好用"
-		}, {
-			time : "2015-05-30 15:34:00",
-			content : "这个应用太好了"
-		}]
-	}
-	$ctx.push(json);
+	var userId = $ctx.getApp("userId");
+	$service.get({
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/opinion/list?page.size=20&search_userId=" + userId,
+		"callback" : "loadOpinionCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadOpinionCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	$ctx.put("list",result.rows);
+	$ctx.dataBind();
 }
 com.layou.study.OpinionDetailController.prototype = {
     loadOpinion : com$layou$study$OpinionDetailController$loadOpinion,

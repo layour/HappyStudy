@@ -3,8 +3,8 @@
 <window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="ClockingIn" controller="ClockingInController" namespace="com.layou.study">
     <import ref="ClockingIn.css" type="css"/>
     <link type="text/css" href="sys/theme.css"/>
-    <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <script src="#{path.controller}/com.layou.study.GlobalFunction.js" type="text/javascript"/>
+    <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0">
         <navigatorbar id="navigatorbar0" title="签到" class="navigatorbarclass">
             <input id="button0" class="ngbbuttonclass" onclick="this.closeClockingIn()" type="button"/>

@@ -11,8 +11,8 @@
         <listView id="listviewdefine0" bindfield="list" onload="this.loadOpinion()">
             <div id="panel0">
                 <div id="panel1">
-                    <label id="label1" bindfield="content" type="multiline">内容</label>
-                    <label id="label2" bindfield="time">2015-05月-29 15:31:00</label> 
+                    <label id="label1" bindfield="opinionDesc" type="multiline">内容</label>
+                    <label id="label2" bindfield="opinionTime">2015-05月-29 15:31:00</label> 
                 </div>
                 <div id="panel2"/> 
             </div> 

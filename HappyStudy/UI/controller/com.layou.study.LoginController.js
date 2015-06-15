@@ -56,7 +56,7 @@ function com$layou$study$LoginController$login(sender, args){
 		return;
 	}
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -76,6 +76,8 @@ function loginCallBack(){
 			"isKeep" : "false"
 		});
 	} else if('1' == result.code){
+		$alert("无此用户");
+	} else if('2' == result.code){
 		$alert("用户名或密码错误");
 	}
 }

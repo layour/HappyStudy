@@ -104,7 +104,7 @@ function com$layou$study$RegisterController$nextJs(sender, args){
 	}
 	var params = "?phoneNo=" + phoneNo + "&password=" + password + "&userName=" + userName + "&sex=" + sex + "&idNo=" + idNo + "&referrerNo=" + referrerNo + "&referrerPhoneNo=" + referrerPhoneNo + "&city=" + city + "&teamType=" + teamType + "&role=" + role + "&teamClass=" + teamClass  
 	$service.post({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/user/mobileSave" + params,
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/user/mobileSave" + params,
 		"callback" : "registerCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -117,6 +117,7 @@ function registerCallBack(){
 	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if(result.code == "0"){
+		$ctx.setApp(result.user)
 		$toast("注册成功");
 		$view.open({
 			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
@@ -128,7 +129,7 @@ function registerCallBack(){
 }
 function com$layou$study$RegisterController$loadTeamType(sender, args){
 	$service.get({
-		"url" : "http://192.168.1.105:8080/HappyStudyServer/teamClass/list",
+		"url" : "http://10.2.112.42:8080/HappyStudyServer/teamClass/mobileList",
 		"callback" : "loadClassCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

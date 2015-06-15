@@ -54,7 +54,7 @@ function com$layou$study$HomeController$openAbout(sender, args){
 	});
 }
 function com$layou$study$HomeController$addBackEvent(sender, args){
-	$service.call("UMJS.addback", {}, false);
+	$js.backConfirm();
 }
 function com$layou$study$HomeController$clockingIn(sender, args){
 	com.layou.study.GlobalFunction.clockingIn();
