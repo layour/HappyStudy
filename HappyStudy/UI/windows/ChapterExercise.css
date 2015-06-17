@@ -52,8 +52,8 @@ valign:TOP;
 halign:LEFT;
 height:0;
 weight:1;
-layout:hbox;
 background:#FFFFFF;
+layout:hbox;
 width:fill;
 valign:center;
 }
@@ -110,8 +110,8 @@ valign:center;
  #panel2 {
 halign:CENTER;
 height:1;
-background:#c7c7c7;
 layout:hbox;
+background:#c7c7c7;
 width:fill;
 valign:top;
 }

@@ -39,50 +39,24 @@ function com$layou$study$ChapterExerciseController$closeChapterExercise(sender, 
 	$view.close();
 }
 function com$layou$study$ChapterExerciseController$loadChapter(sender, args){
-	var json = {
-		list : [{
-			index : 1,
-			chapter : "第一章",
-			count : "120题"
-		}, {
-			index : 2,
-			chapter : "第二章",
-			count : "128题"
-		}, {
-			index : 3,
-			chapter : "第三章",
-			count : "165题"
-		}, {
-			index : 4,
-			chapter : "第四章",
-			count : "200题"
-		}, {
-			index : 5,
-			chapter : "第五章",
-			count : "50题"
-		}, {
-			index : 6,
-			chapter : "第六章",
-			count : "90题"
-		}, {
-			index : 7,
-			chapter : "第七章",
-			count : "110题"
-		}, {
-			index : 8,
-			chapter : "第八章",
-			count : "56题"
-		}, {
-			index : 9,
-			chapter : "第九章",
-			count : "52题"
-		}, {
-			index : 10,
-			chapter : "法律法规",
-			count : "146题"
-		}]
-	}
-	$ctx.push(json);
+	var userId = $ctx.getApp("userId");
+	$service.get({
+		"url" : "http://10.2.112.76:8080/HappyStudyServer/chapter/list?page.size=20",
+		"callback" : "loadChapterCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadChapterCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	$alert(result);
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	var array = new Array();
+	for (var i=0; i < result.rows.length; i++) {
+		var chapterObj = {"index":i + 1,"chapter":result.rows[i].chapterName,"count":i};
+	  	array[i] = chapterObj;
+	};
+	$ctx.put("list",array);
+	$ctx.dataBind();
 }
 function com$layou$study$ChapterExerciseController$enterExerciseTopic(sender, args){
 	$view.open({
