@@ -24,8 +24,8 @@
   <view id="ExamHistory" ref="ExamHistory.dsl" include="true"/>  
   <view id="ExamHistoryTopic" ref="ExamHistoryTopic.dsl" include="true"/>  
   <view id="Login" ref="Login.dsl" include="true"/>  
-  <import id="gaodeMap" type="mobile" ref="component"/>
-  <import id="twoDimensionCode" type="mobile" ref="component"/>
+  <import id="gaodeMap" type="mobile" ref="component"/>  
+  <import id="twoDimensionCode" type="mobile" ref="component"/> 
 </application>
 <!--
 【屏幕显示方向】

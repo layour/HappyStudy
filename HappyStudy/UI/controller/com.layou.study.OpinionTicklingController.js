@@ -56,10 +56,9 @@ function com$layou$study$OpinionTicklingController$addOpinion(sender, args){
 		$alert("联系方式不能为空");
 		return;
 	}
-	var params = "?opinionDesc=" + opinionDesc + "&contactInfo=" + contactInfo + "&userId=" + userId;
-	//params = $js.urlEncode(params);
+	var params = "?opinionDesc=" + $js.urlEncode(opinionDesc) + "&contactInfo=" + $js.urlEncode(contactInfo) + "&userId=" + userId;
 	$service.get({
-		"url" : "http://10.2.112.33:8080/HappyStudyServer/opinion/mobileSave" + params,
+		"url" : "http://10.2.112.76:8080/HappyStudyServer/opinion/mobileSave" + params,
 		"callback" : "opioionCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

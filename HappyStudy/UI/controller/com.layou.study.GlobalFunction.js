@@ -14,7 +14,7 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	var data = $ctx.getString("code");            
 	
 	var checkAddr = "合肥";
-	var location = $ctx.getApp("expr");
+	var location = $ctx.getApp("address");
 	if(!com.layou.study.GlobalUtil.isEmptyString(location)){
 		checkAddr = location;
 	}
@@ -22,11 +22,9 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	var checkType = "签到";
 	var userId = $ctx.getApp("userId");
 	
-	var params = "?checkTime=" + data + "&checkAddr=" + checkAddr + "&checkType=" + checkType + "&userId=" + userId;
-	//params = $js.urlEncode(params);
-	$alert("http://10.2.112.33:8080/HappyStudyServer/checkIn/mobileSave" + params);
+	var params = "?checkTime=" + data + "&checkAddr=" + $js.urlEncode(checkAddr) + "&checkType=" + $js.urlEncode(checkType) + "&userId=" + userId;
 	$service.get({
-		"url" : "http://10.2.112.33:8080/HappyStudyServer/checkIn/mobileSave" + params,
+		"url" : "http://10.2.112.76:8080/HappyStudyServer/checkIn/mobileSave" + params,
 		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
