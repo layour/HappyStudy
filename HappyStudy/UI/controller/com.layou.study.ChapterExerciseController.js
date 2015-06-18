@@ -41,24 +41,45 @@ function com$layou$study$ChapterExerciseController$closeChapterExercise(sender, 
 function com$layou$study$ChapterExerciseController$loadChapter(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.76:8080/HappyStudyServer/chapter/list?page.size=20",
+		"url" : "http://10.2.112.52:8080/HappyStudyServer/chapter/mobileList",
 		"callback" : "loadChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
 function loadChapterCallback(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
-	$alert(result);
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	var array = new Array();
 	for (var i=0; i < result.rows.length; i++) {
-		var chapterObj = {"index":i + 1,"chapter":result.rows[i].chapterName,"count":i};
+		var chapterObj = {
+			"chapterId" : result.rows[i].chapterId, 
+			"index" : i + 1,
+			"chapter" : result.rows[i].chapterName,
+			"count" : result.rows[i].count + "题"
+		};
 	  	array[i] = chapterObj;
 	};
 	$ctx.put("list",array);
 	$ctx.dataBind();
 }
 function com$layou$study$ChapterExerciseController$enterExerciseTopic(sender, args){
+	var data = $id("listviewdefine0").get("row");
+	$alert(data);
+	data = $stringToJSON(data);//将字符串转换成JSON对象
+	var chapterId = data.chapterId;
+	$service.get({
+		"url" : "http://10.2.112.52:8080/HappyStudyServer/topic/list?page.size=20&search_chapterId=" + chapterId,
+		"callback" : "loadToticByChapterCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadToticByChapterCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	$alert(result);
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	$ctx.put("list",result.rows);
+	$ctx.dataBind();
+	
 	$view.open({
 		"viewid" : "com.layou.study.ExerciseTopic",//目标页面（首字母大写）全名，
 		"isKeep" : "true"

@@ -56,7 +56,7 @@ function com$layou$study$LoginController$login(sender, args){
 		return;
 	}
 	$service.get({
-		"url" : "http://10.2.112.76:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : "http://10.2.112.52:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
