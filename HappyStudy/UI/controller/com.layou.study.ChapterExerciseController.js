@@ -68,7 +68,7 @@ function com$layou$study$ChapterExerciseController$enterExerciseTopic(sender, ar
 	var chapterId = data.chapterId;
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findByUserChapter?search_chapterId=" + chapterId + "&search_userId=" + userId,
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findTopicByUserChapter?search_chapterId=" + chapterId + "&search_userId=" + userId,
 		"callback" : "loadToticByChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

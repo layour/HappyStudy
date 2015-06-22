@@ -21,8 +21,8 @@
                     <input id="imagebutton0" value="模拟考试" istogglebutton="false" class="imagebuttonclass" onclick="this.enterExamSelect()" type="imagebutton" checked="false"/> 
                 </div>
                 <div id="panel5">
-                    <input id="imagebutton1" value="我的错题" istogglebutton="false" class="imagebuttonclass" onclick="this.enterChapterCollect()" type="imagebutton" checked="false"/>
-                    <input id="imagebutton2" value="网络错题" istogglebutton="false" class="imagebuttonclass" onclick="this.enterChapterCollect()" type="imagebutton" checked="false"/> 
+                    <input id="imagebutton1" value="我的错题" istogglebutton="false" class="imagebuttonclass" onclick="this.enterMyErrorTopic()" type="imagebutton" checked="false"/>
+                    <input id="imagebutton2" value="网络错题" istogglebutton="false" class="imagebuttonclass" onclick="this.enterNetworkErrorTopic()" type="imagebutton" checked="false"/> 
                 </div> 
             </div>
             <div id="panel3">
@@ -31,7 +31,7 @@
                     <input id="imagebutton4" value="随机练习" istogglebutton="false" class="imagebuttonclass" onclick="this.enterExerciseTopic()" type="imagebutton" checked="false"/> 
                 </div>
                 <div id="panel8">
-                    <input id="imagebutton5" value="我的收藏" istogglebutton="false" class="imagebuttonclass" onclick="this.enterChapterCollect()" type="imagebutton" checked="false"/> 
+                    <input id="imagebutton5" value="我的收藏" istogglebutton="false" class="imagebuttonclass" onclick="this.enterMyCollectTopic()" type="imagebutton" checked="false"/> 
                 </div> 
             </div> 
         </div>

@@ -79,21 +79,15 @@ function com$layou$study$HomeController$enterChapterExercise(sender, args){
 		"isKeep" : "true"
 	});
 }
-function com$layou$study$HomeController$enterChapterCollect(sender, args){
-	$view.open({
-		"viewid" : "com.layou.study.ErrorTopic",//目标页面（首字母大写）全名，
-		"isKeep" : "true"
-	});
-}
 function com$layou$study$HomeController$enterExerciseTopic(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findByUser?search_userId=" + userId,
-		"callback" : "loadToticCallback()",
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findTopicByUser?search_userId=" + userId,
+		"callback" : "loadExerciseToticCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
-function loadToticCallback(){
+function loadExerciseToticCallback(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
 	if(com.layou.study.GlobalUtil.isEmptyString(result)){
 		$alert("请求超时");
@@ -114,10 +108,48 @@ function com$layou$study$HomeController$enterExamSelect(sender, args){
 		"isKeep" : "true"
 	});
 }
+function com$layou$study$HomeController$enterNetworkErrorTopic(sender, args){
+	$view.open({
+		"viewid" : "com.layou.study.NetworkErrorTopic",//目标页面（首字母大写）全名，
+		"isKeep" : "true"
+	});
+}
+function com$layou$study$HomeController$enterMyErrorTopic(sender, args){
+	$view.open({
+		"viewid" : "com.layou.study.ErrorTopic",//目标页面（首字母大写）全名，
+		"isKeep" : "true"
+	});
+}
+function com$layou$study$HomeController$enterMyCollectTopic(sender, args){
+	var userId = $ctx.getApp("userId");
+	$service.get({
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
+		"callback" : "loadMyCollectTopicCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadMyCollectTopicCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+$alert(result);
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("请求超时");
+		return;
+	}
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	if(result.rows.length > 0){
+		$view.open({
+			"viewid" : "com.layou.study.ErrorTopic",//目标页面（首字母大写）全名，
+			"isKeep" : "true",
+			"toticData" : result
+		});
+	}
+}
 com.layou.study.HomeController.prototype = {
+    enterMyCollectTopic : com$layou$study$HomeController$enterMyCollectTopic,
+    enterMyErrorTopic : com$layou$study$HomeController$enterMyErrorTopic,
+    enterNetworkErrorTopic : com$layou$study$HomeController$enterNetworkErrorTopic,
     enterExamSelect : com$layou$study$HomeController$enterExamSelect,
     enterExerciseTopic : com$layou$study$HomeController$enterExerciseTopic,
-    enterChapterCollect : com$layou$study$HomeController$enterChapterCollect,
     enterChapterExercise : com$layou$study$HomeController$enterChapterExercise,
     clockingIn : com$layou$study$HomeController$clockingIn,
     addBackEvent : com$layou$study$HomeController$addBackEvent,
