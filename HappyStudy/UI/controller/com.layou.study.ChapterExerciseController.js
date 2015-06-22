@@ -41,7 +41,7 @@ function com$layou$study$ChapterExerciseController$closeChapterExercise(sender, 
 function com$layou$study$ChapterExerciseController$loadChapter(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.52:8080/HappyStudyServer/chapter/mobileList",
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/chapter/mobileList",
 		"callback" : "loadChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -64,26 +64,29 @@ function loadChapterCallback(){
 }
 function com$layou$study$ChapterExerciseController$enterExerciseTopic(sender, args){
 	var data = $id("listviewdefine0").get("row");
-	$alert(data);
 	data = $stringToJSON(data);//将字符串转换成JSON对象
 	var chapterId = data.chapterId;
+	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.52:8080/HappyStudyServer/topic/list?page.size=20&search_chapterId=" + chapterId,
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findByUserChapter?search_chapterId=" + chapterId + "&search_userId=" + userId,
 		"callback" : "loadToticByChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
 }
 function loadToticByChapterCallback(){
 	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
-	$alert(result);
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("请求超时");
+		return;
+	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
-	$ctx.put("list",result.rows);
-	$ctx.dataBind();
-	
-	$view.open({
-		"viewid" : "com.layou.study.ExerciseTopic",//目标页面（首字母大写）全名，
-		"isKeep" : "true"
-	});
+	if(result.rows.length > 0){
+		$view.open({
+			"viewid" : "com.layou.study.ExerciseTopic",//目标页面（首字母大写）全名，
+			"isKeep" : "true",
+			"toticData" : result
+		});
+	}
 }
 com.layou.study.ChapterExerciseController.prototype = {
     enterExerciseTopic : com$layou$study$ChapterExerciseController$enterExerciseTopic,

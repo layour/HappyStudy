@@ -114,8 +114,8 @@ valign:center;
  #checkbox4 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
  #label7 {
 halign:left;
@@ -140,8 +140,8 @@ valign:center;
  #checkbox5 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
  #label8 {
 halign:left;
@@ -166,8 +166,8 @@ valign:center;
  #checkbox6 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
  #label9 {
 halign:left;
@@ -192,8 +192,8 @@ valign:center;
  #checkbox7 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
  #label10 {
 halign:left;
@@ -204,6 +204,21 @@ font-size:16;
 width:fill;
 font-family:default;
 valign:center;
+}
+ #label17 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
 }
  #panel1 {
 halign:center;
@@ -238,8 +253,8 @@ valign:center;
  #checkbox0 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
  #label2 {
 halign:left;
@@ -264,8 +279,8 @@ valign:center;
  #checkbox1 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
  #label3 {
 halign:left;
@@ -290,8 +305,8 @@ valign:center;
  #checkbox2 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
  #label4 {
 halign:left;
@@ -316,8 +331,8 @@ valign:center;
  #checkbox3 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
  #label5 {
 halign:left;
@@ -328,6 +343,21 @@ font-size:16;
 width:fill;
 font-family:default;
 valign:center;
+}
+ #label18 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
 }
  #panel2 {
 halign:center;
@@ -363,8 +393,8 @@ valign:center;
  #checkbox8 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
  #label12 {
 halign:left;
@@ -389,8 +419,8 @@ valign:center;
  #checkbox9 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
  #label13 {
 halign:left;
@@ -415,8 +445,8 @@ valign:center;
  #checkbox10 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
  #label14 {
 halign:left;
@@ -441,8 +471,8 @@ valign:center;
  #checkbox11 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
  #label15 {
 halign:left;
@@ -453,4 +483,19 @@ font-size:16;
 width:fill;
 font-family:default;
 valign:center;
+}
+ #label16 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
 }

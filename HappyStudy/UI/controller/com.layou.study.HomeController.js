@@ -81,15 +81,32 @@ function com$layou$study$HomeController$enterChapterExercise(sender, args){
 }
 function com$layou$study$HomeController$enterChapterCollect(sender, args){
 	$view.open({
-		"viewid" : "com.layou.study.ChapterCollect",//目标页面（首字母大写）全名，
+		"viewid" : "com.layou.study.ErrorTopic",//目标页面（首字母大写）全名，
 		"isKeep" : "true"
 	});
 }
 function com$layou$study$HomeController$enterExerciseTopic(sender, args){
-	$view.open({
-		"viewid" : "com.layou.study.ExerciseTopic",//目标页面（首字母大写）全名，
-		"isKeep" : "true"
+	var userId = $ctx.getApp("userId");
+	$service.get({
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findByUser?search_userId=" + userId,
+		"callback" : "loadToticCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
+}
+function loadToticCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("请求超时");
+		return;
+	}
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	if(result.rows.length > 0){
+		$view.open({
+			"viewid" : "com.layou.study.ExerciseTopic",//目标页面（首字母大写）全名，
+			"isKeep" : "true",
+			"toticData" : result
+		});
+	}
 }
 function com$layou$study$HomeController$enterExamSelect(sender, args){
 	$view.open({

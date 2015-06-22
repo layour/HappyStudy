@@ -16,7 +16,6 @@
   <view id="SystemHelp" ref="SystemHelp.dsl" include="true"/>  
   <view id="AboutSystem" ref="AboutSystem.dsl" include="true"/>  
   <view id="ChapterExercise" ref="ChapterExercise.dsl" include="true"/>  
-  <view id="ChapterCollect" ref="ChapterCollect.dsl" include="true"/>  
   <view id="ExerciseTopic" ref="ExerciseTopic.dsl" include="true"/>  
   <view id="ExamTopic" ref="ExamTopic.dsl" include="true"/>  
   <view id="ExamSelect" ref="ExamSelect.dsl" include="true"/>  
