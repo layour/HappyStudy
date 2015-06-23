@@ -32,6 +32,7 @@ function com$layou$study$ExerciseTopicController$initialize(){
     
 }
 
+//定义查询题目结果对象
 var exerciseTopic = new Object();
     
 function com$layou$study$ExerciseTopicController$evaljs(js){
@@ -315,21 +316,20 @@ function com$layou$study$ExerciseTopicController$loadProviousTopicFlipper(sender
 	}
 }
 function com$layou$study$ExerciseTopicController$collectTopic(sender, args){
-	//var collectFlag = $id("imagebutton2").get("value");
 	var collect = exerciseTopic.topicRows[exerciseTopic.topicIndex].collect;
 	var topicId = exerciseTopic.topicRows[exerciseTopic.topicIndex].topicId;
 	var userId = $ctx.getApp("userId");
 	if(collect == "false"){
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.2.112.33:8080/HappyStudyServer/collect/mobileSave" + params,
+			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileSave" + params,
 			"callback" : "collectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
 	} else {
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.2.112.33:8080/HappyStudyServer/collect/mobileDelete" + params,
+			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileDelete" + params,
 			"callback" : "reCollectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});

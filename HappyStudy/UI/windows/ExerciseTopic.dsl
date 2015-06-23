@@ -12,7 +12,7 @@
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/>
             <input id="imagebutton2" value="收藏" istogglebutton="false" onclick="this.collectTopic()" type="imagebutton" checked="false"/> 
         </navigatorbar>
-        <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="1">
+        <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="0">
             <div id="panel0" title="页面1">
                 <label id="label6" type="multiline">一年期的意外伤害保险费率厘定的因素主要是考虑？ </label>
                 <div id="panel7">

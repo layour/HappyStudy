@@ -7,7 +7,7 @@
         <navigatorbar id="navigatorbar0" class="navigatorbarclass">
             <input id="button0" class="ngbbuttonclass" onclick="this.closeNetworkErrorTopic()" type="button"/>
             <label id="label0"/>
-            <input id="imagebutton0" value="详解" istogglebutton="false" type="imagebutton" checked="false"/>
+            <input id="imagebutton0" value="详解" istogglebutton="false" onclick="this.showAnalysis()" type="imagebutton" checked="false"/>
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/> 
         </navigatorbar>
         <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="0">

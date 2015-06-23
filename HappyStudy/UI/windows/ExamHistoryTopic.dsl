@@ -8,25 +8,25 @@
             <input id="button0" class="ngbbuttonclass" onclick="this.closeExamHistoryTopic()" type="button"/>
             <label id="label0"/>
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/>
-            <input id="imagebutton2" value="收藏" istogglebutton="false" type="imagebutton" checked="false"/> 
+            <input id="imagebutton2" value="收藏" istogglebutton="false" onclick="this.collectTopic()" type="imagebutton" checked="false"/> 
         </navigatorbar>
         <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="0">
             <div id="panel0" title="页面1">
                 <label id="label1" type="multiline">一年期的意外伤害保险费率厘定的因素主要是考虑？ </label>
                 <div id="panel1">
-                    <input id="checkbox0" type="checkbox" onchange="this.selectA()"/>
+                    <input id="checkbox0" type="checkbox"/>
                     <label id="label2" type="multiline">预定利率</label> 
                 </div>
                 <div id="panel2">
-                    <input id="checkbox1" type="checkbox" onchange="this.selectB()"/>
+                    <input id="checkbox1" type="checkbox"/>
                     <label id="label3" type="multiline">意外的持续时间</label> 
                 </div>
                 <div id="panel3">
-                    <input id="checkbox2" type="checkbox" onchange="this.selectC()"/>
+                    <input id="checkbox2" type="checkbox"/>
                     <label id="label4" type="multiline">被保险人的职业、工种</label> 
                 </div>
                 <div id="panel4">
-                    <input id="checkbox3" type="checkbox" onchange="this.selectD()"/>
+                    <input id="checkbox3" type="checkbox"/>
                     <label id="label5" type="multiline">被保险人的死亡率</label> 
                 </div>
                 <label id="label6" type="multiline">正确答案：B</label> 

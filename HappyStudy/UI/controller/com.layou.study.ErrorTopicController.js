@@ -32,6 +32,7 @@ function com$layou$study$ErrorTopicController$initialize(){
     
 }
 
+//定义查询题目结果对象
 var errorTopic = new Object();
     
 function com$layou$study$ErrorTopicController$evaljs(js){
