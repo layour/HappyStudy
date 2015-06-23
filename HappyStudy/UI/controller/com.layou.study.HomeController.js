@@ -82,7 +82,7 @@ function com$layou$study$HomeController$enterChapterExercise(sender, args){
 function com$layou$study$HomeController$enterExerciseTopic(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findTopicByUser?search_userId=" + userId,
+		"url" : "http://10.2.112.33:8080/HappyStudyServer/topic/findTopicByUser?search_userId=" + userId,
 		"callback" : "loadExerciseToticCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -123,7 +123,7 @@ function com$layou$study$HomeController$enterMyErrorTopic(sender, args){
 function com$layou$study$HomeController$enterMyCollectTopic(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
+		"url" : "http://10.2.112.33:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
 		"callback" : "loadMyCollectTopicCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

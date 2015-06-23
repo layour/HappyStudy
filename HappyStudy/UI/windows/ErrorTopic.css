@@ -114,8 +114,8 @@ valign:center;
  #checkbox0 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
  #label2 {
 halign:left;
@@ -140,8 +140,8 @@ valign:center;
  #checkbox1 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
  #label3 {
 halign:left;
@@ -166,8 +166,8 @@ valign:center;
  #checkbox2 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
  #label4 {
 halign:left;
@@ -192,8 +192,8 @@ valign:center;
  #checkbox3 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
  #label5 {
 halign:left;
@@ -205,6 +205,21 @@ width:fill;
 font-family:default;
 valign:center;
 }
+ #label6 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
+}
  #panel5 {
 halign:center;
 height:fill;
@@ -212,7 +227,7 @@ layout:vbox;
 width:fill;
 valign:TOP;
 }
- #label6 {
+ #label7 {
 halign:left;
 width:fill;
 margin-bottom:10;
@@ -238,10 +253,10 @@ valign:center;
  #checkbox4 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
- #label7 {
+ #label8 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -264,10 +279,10 @@ valign:center;
  #checkbox5 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
- #label8 {
+ #label9 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -290,10 +305,10 @@ valign:center;
  #checkbox6 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
- #label9 {
+ #label10 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -316,10 +331,10 @@ valign:center;
  #checkbox7 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
- #label10 {
+ #label11 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -329,6 +344,21 @@ width:fill;
 font-family:default;
 valign:center;
 }
+ #label12 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
+}
  #panel10 {
 halign:center;
 height:fill;
@@ -336,7 +366,7 @@ layout:vbox;
 width:fill;
 valign:TOP;
 }
- #label11 {
+ #label13 {
 halign:left;
 width:fill;
 margin-bottom:10;
@@ -363,10 +393,10 @@ valign:center;
  #checkbox8 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_a.png;
+check-off-image:checkbox_a_no.png;
 }
- #label12 {
+ #label14 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -389,10 +419,10 @@ valign:center;
  #checkbox9 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_b.png;
+check-off-image:checkbox_b_no.png;
 }
- #label13 {
+ #label15 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -415,10 +445,10 @@ valign:center;
  #checkbox10 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_c.png;
+check-off-image:checkbox_c_no.png;
 }
- #label14 {
+ #label16 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -441,10 +471,10 @@ valign:center;
  #checkbox11 {
 height:44;
 width:44;
-check-on-image:checkbox_select;
-check-off-image:checkbox_noselect;
+check-on-image:checkbox_d.png;
+check-off-image:checkbox_d_no.png;
 }
- #label15 {
+ #label17 {
 halign:left;
 height:wrap;
 color:#000000;
@@ -453,4 +483,19 @@ font-size:16;
 width:fill;
 font-family:default;
 valign:center;
+}
+ #label18 {
+halign:left;
+width:fill;
+margin-bottom:10;
+display:none;
+margin-right:15;
+height:wrap;
+color:#f7931e;
+heightWrap:44.0;
+font-size:16;
+margin-left:15;
+font-family:default;
+margin-top:40;
+valign:top;
 }

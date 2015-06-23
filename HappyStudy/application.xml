@@ -25,7 +25,7 @@
   <view id="Login" ref="Login.dsl" include="true"/>  
   <import id="gaodeMap" type="mobile" ref="component"/>  
   <import id="twoDimensionCode" type="mobile" ref="component"/>  
-  <view id="NetworkErrorTopic" ref="NetworkErrorTopic.dsl" include="true"/>
+  <view id="NetworkErrorTopic" ref="NetworkErrorTopic.dsl" include="true"/> 
 </application>
 <!--
 【屏幕显示方向】
