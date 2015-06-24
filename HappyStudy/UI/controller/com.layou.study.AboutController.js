@@ -60,8 +60,8 @@ function com$layou$study$AboutController$loadUserInfo(sender, args){
 	var userName = $ctx.getApp("userName");
 	var teamType = $ctx.getApp("teamType");
 	var teamClass = $ctx.getApp("teamClass");
-	$id("label4").setAttribute("value", userName);
-	$id("label5").setAttribute("value", teamType + "-" + teamClass);
+	$id("label4").set("value", userName);
+	$id("label5").set("value", teamType + "-" + teamClass);
 }
 com.layou.study.AboutController.prototype = {
     loadUserInfo : com$layou$study$AboutController$loadUserInfo,

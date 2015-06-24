@@ -39,30 +39,27 @@ function com$layou$study$ExamHistoryController$closeExamHistory(sender, args){
 	$view.close();
 }
 function com$layou$study$ExamHistoryController$loadExamHistory(sender, args){
-	var json = {
-		list : [{
-			index : 5,
-			score : "100分",
-			time : "用时00:00 2015-06-02 15:17:00"
-		}, {
-			index : 4,
-			score : "90分",
-			time : "用时00:00 2015-06-02 15:17:00"
-		}, {
-			index : 3,
-			score : "80分",
-			time : "用时00:00 2015-06-02 15:17:00"
-		}, {
-			index : 2,
-			score : "70分",
-			time : "用时00:00 2015-06-02 15:17:00"
-		}, {
-			index : 1,
-			score : "60分",
-			time : "用时00:00 2015-06-02 15:17:00"
-		}]
-	}
-	$ctx.push(json);
+	var userId = $ctx.getApp("userId");
+	$service.get({
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/examRecord/list?page.size=20&search_userId=" + userId,
+		"callback" : "loadExamHistoryCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
+	});
+}
+function loadExamHistoryCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	var array = new Array();
+	for (var i=0; i < result.rows.length; i++) {
+		var chapterObj = {
+			"index" : result.rows.length - i,
+			"score" : result.rows[i].examScore + "分",
+			"time" : "用时" + result.rows[i].useTime + " | " + result.rows[i].examTime
+		};
+	  	array[i] = chapterObj;
+	};
+	$ctx.put("list", array);
+	$ctx.dataBind();
 }
 function com$layou$study$ExamHistoryController$enterExamHistoryTopic(sender, args){
 	$view.open({

@@ -104,7 +104,7 @@ function com$layou$study$RegisterController$nextJs(sender, args){
 	}
 	var params = "?phoneNo=" + phoneNo + "&password=" + password + "&userName=" + $js.urlEncode(userName) + "&sex=" + $js.urlEncode(sex) + "&idNo=" + idNo + "&referrerNo=" + referrerNo + "&referrerPhoneNo=" + referrerPhoneNo + "&city=" + $js.urlEncode(city) + "&teamType=" + $js.urlEncode(teamType) + "&role=" + $js.urlEncode(role) + "&teamClass=" + $js.urlEncode(teamClass)  
 	$service.get({
-		"url" : "http://10.2.112.27:8080/HappyStudyServer/user/mobileSave" + params,
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/user/mobileSave" + params,
 		"callback" : "registerCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -129,7 +129,7 @@ function registerCallBack(){
 }
 function com$layou$study$RegisterController$loadTeamType(sender, args){
 	$service.get({
-		"url" : "http://10.2.112.27:8080/HappyStudyServer/teamClass/mobileList",
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/teamClass/mobileList",
 		"callback" : "loadClassCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -151,17 +151,17 @@ function loadClassCallBack(){
 function com$layou$study$RegisterController$selectMale(sender, args){
 	var selectMale = $id("checkbox0").getAttribute("checked");
 	if(selectMale == "true"){
-		$id("checkbox1").setAttribute("checked", "false");
+		$id("checkbox1").set("checked", "false");
 	} else {
-		$id("checkbox0").setAttribute("checked", "true");
+		$id("checkbox0").set("checked", "true");
 	}
 }
 function com$layou$study$RegisterController$selectWoman(sender, args){
 	var selectWoman = $id("checkbox1").getAttribute("checked");
 	if(selectWoman == "true"){
-		$id("checkbox0").setAttribute("checked", "false");
+		$id("checkbox0").set("checked", "false");
 	} else {
-		$id("checkbox1").setAttribute("checked", "true");
+		$id("checkbox1").set("checked", "true");
 	}
 }
 com.layou.study.RegisterController.prototype = {

@@ -15,7 +15,7 @@
                     <label id="label1" bindfield="index">1</label>
                     <div id="panel3">
                         <label id="label2" bindfield="score">0分</label>
-                        <label id="label3" bindfield="time">用时00:00 2015-06-02 15:17:00</label> 
+                        <label id="label3" bindfield="time">用时00:00 | 2015-06-02 15:17:00</label> 
                     </div> 
                 </div>
                 <div id="panel2"/> 

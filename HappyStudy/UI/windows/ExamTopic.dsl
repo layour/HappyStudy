@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="ExamTopic" controller="ExamTopicController" namespace="com.layou.study">
+<window xmlns:web="http://www.yonyou.com/uapmobile/dsl" id="ExamTopic" onkeydown="this.changeOnKeyDown()" controller="ExamTopicController" namespace="com.layou.study">
     <import ref="ExamTopic.css" type="css"/>
     <link type="text/css" href="sys/theme.css"/>
     <div id="viewPage0">
         <navigatorbar id="navigatorbar0" class="navigatorbarclass">
             <input id="button0" class="ngbbuttonclass" onclick="this.closeExamTopic()" type="button"/>
             <label id="label0"/>
-            <input id="imagebutton3" value="交卷" istogglebutton="false" type="imagebutton" checked="false"/>
+            <input id="imagebutton3" value="交卷" istogglebutton="false" onclick="this.commitPaper()" type="imagebutton" checked="false"/>
             <input id="imagebutton4" value="45:50" istogglebutton="false" type="imagebutton" checked="false"/>
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/> 
         </navigatorbar>

@@ -133,14 +133,14 @@ function com$layou$study$ExamHistoryTopicController$collectTopic(sender, args){
 	if(collect == "false"){
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.2.112.27:8080/HappyStudyServer/collect/mobileSave" + params,
+			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileSave" + params,
 			"callback" : "collectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
 	} else {
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.2.112.27:8080/HappyStudyServer/collect/mobileDelete" + params,
+			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileDelete" + params,
 			"callback" : "reCollectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
@@ -178,10 +178,6 @@ function reCollectTopicCallback(){
 }
 com.layou.study.ExamHistoryTopicController.prototype = {
     collectTopic : com$layou$study$ExamHistoryTopicController$collectTopic,
-    selectD : com$layou$study$ExamHistoryTopicController$selectD,
-    selectC : com$layou$study$ExamHistoryTopicController$selectC,
-    selectB : com$layou$study$ExamHistoryTopicController$selectB,
-    selectA : com$layou$study$ExamHistoryTopicController$selectA,
     loadNextTopicFlipper : com$layou$study$ExamHistoryTopicController$loadNextTopicFlipper,
     loadProviousTopicFlipper : com$layou$study$ExamHistoryTopicController$loadProviousTopicFlipper,
     loadTopicFlipper : com$layou$study$ExamHistoryTopicController$loadTopicFlipper,

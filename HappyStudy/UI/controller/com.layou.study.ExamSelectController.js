@@ -44,7 +44,7 @@ function com$layou$study$ExamSelectController$enterExamTopic(sender, args){
 	//////////////////////////////
 	var paperId = "8a82f09b4e242686014e242686900000";
 	$service.get({
-		"url" : "http://10.2.112.27:8080/HappyStudyServer/topic/findTopicByPaper?search_paperId=" + paperId,
+		"url" : "http://192.168.1.109:8080/HappyStudyServer/topic/findTopicByPaper?search_paperId=" + paperId,
 		"callback" : "loadExamToticCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -75,8 +75,8 @@ function com$layou$study$ExamSelectController$loadUserInfo(sender, args){
 	var userName = $ctx.getApp("userName");
 	var teamType = $ctx.getApp("teamType");
 	var teamClass = $ctx.getApp("teamClass");
-	$id("label1").setAttribute("value", userName);
-	$id("label2").setAttribute("value", teamType + "-" + teamClass + " | 中国平安培训");
+	$id("label1").set("value", userName);
+	$id("label2").set("value", teamType + "-" + teamClass + " | 中国平安培训");
 }
 function com$layou$study$ExamSelectController$popExamPaper(sender, args){
 	var jsonArgs = {

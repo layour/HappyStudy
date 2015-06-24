@@ -39,7 +39,7 @@ function com$layou$study$ExamTopicController$evaljs(js){
     eval(js)
 }
 function com$layou$study$ExamTopicController$closeExamTopic(sender, args){
-	$view.close();
+	comfirmCommitPaper();
 }
 function com$layou$study$ExamTopicController$loadTopicFlipper(sender, args){
 	var data = $param.getJSONObject("toticData");
@@ -124,114 +124,127 @@ function com$layou$study$ExamTopicController$selectA(sender, args){
 	if(flipperIndex == 0){
 		var selectA = $id("checkbox0").getAttribute("checked");
 		if(selectA == "false"){
-			$id("checkbox0").setAttribute("checked", "true");
+			$id("checkbox0").set("checked", "true");
 		}
-		$id("checkbox1").setAttribute("checked", "false");
-		$id("checkbox2").setAttribute("checked", "false");
-		$id("checkbox3").setAttribute("checked", "false");
+		$id("checkbox1").set("checked", "false");
+		$id("checkbox2").set("checked", "false");
+		$id("checkbox3").set("checked", "false");
 	} else if(flipperIndex == 1){
 		var selectA = $id("checkbox4").getAttribute("checked");
 		if(selectA == "false"){
-			$id("checkbox4").setAttribute("checked", "true");
+			$id("checkbox4").set("checked", "true");
 		}
-		$id("checkbox5").setAttribute("checked", "false");
-		$id("checkbox6").setAttribute("checked", "false");
-		$id("checkbox7").setAttribute("checked", "false");
+		$id("checkbox5").set("checked", "false");
+		$id("checkbox6").set("checked", "false");
+		$id("checkbox7").set("checked", "false");
 	} else if(flipperIndex == 2){
 		var selectA = $id("checkbox8").getAttribute("checked");
 		if(selectA == "false"){
-			$id("checkbox8").setAttribute("checked", "true");
+			$id("checkbox8").set("checked", "true");
 		}
-		$id("checkbox9").setAttribute("checked", "false");
-		$id("checkbox10").setAttribute("checked", "false");
-		$id("checkbox11").setAttribute("checked", "false");
+		$id("checkbox9").set("checked", "false");
+		$id("checkbox10").set("checked", "false");
+		$id("checkbox11").set("checked", "false");
 	}
 }
 function com$layou$study$ExamTopicController$selectB(sender, args){
 	var flipperIndex = $id("flipperdefine0").get("viewindex");
 	if(flipperIndex == 0){
-		$id("checkbox0").setAttribute("checked", "false");
+		$id("checkbox0").set("checked", "false");
 		var selectB = $id("checkbox1").getAttribute("checked");
 		if(selectB == "false"){
-			$id("checkbox1").setAttribute("checked", "true");
+			$id("checkbox1").set("checked", "true");
 		}
-		$id("checkbox2").setAttribute("checked", "false");
-		$id("checkbox3").setAttribute("checked", "false");
+		$id("checkbox2").set("checked", "false");
+		$id("checkbox3").set("checked", "false");
 	} else if(flipperIndex == 1){
-		$id("checkbox4").setAttribute("checked", "false");
+		$id("checkbox4").set("checked", "false");
 		var selectB = $id("checkbox5").getAttribute("checked");
 		if(selectB == "false"){
-			$id("checkbox5").setAttribute("checked", "true");
+			$id("checkbox5").set("checked", "true");
 		}
-		$id("checkbox6").setAttribute("checked", "false");
-		$id("checkbox7").setAttribute("checked", "false");
+		$id("checkbox6").set("checked", "false");
+		$id("checkbox7").set("checked", "false");
 	} else if(flipperIndex == 2){
-		$id("checkbox8").setAttribute("checked", "false");
+		$id("checkbox8").set("checked", "false");
 		var selectB = $id("checkbox9").getAttribute("checked");
 		if(selectB == "false"){
-			$id("checkbox9").setAttribute("checked", "true");
+			$id("checkbox9").set("checked", "true");
 		}
-		$id("checkbox10").setAttribute("checked", "false");
-		$id("checkbox11").setAttribute("checked", "false");
+		$id("checkbox10").set("checked", "false");
+		$id("checkbox11").set("checked", "false");
 	}
 }
 function com$layou$study$ExamTopicController$selectC(sender, args){
 	var flipperIndex = $id("flipperdefine0").get("viewindex");
 	if(flipperIndex == 0){
-		$id("checkbox0").setAttribute("checked", "false");
-		$id("checkbox1").setAttribute("checked", "false");
+		$id("checkbox0").set("checked", "false");
+		$id("checkbox1").set("checked", "false");
 		var selectC = $id("checkbox2").getAttribute("checked");
 		if(selectC == "false"){
-			$id("checkbox2").setAttribute("checked", "true");
+			$id("checkbox2").set("checked", "true");
 		}
-		$id("checkbox3").setAttribute("checked", "false");
+		$id("checkbox3").set("checked", "false");
 	} else if(flipperIndex == 1){
-		$id("checkbox4").setAttribute("checked", "false");
-		$id("checkbox5").setAttribute("checked", "false");
+		$id("checkbox4").set("checked", "false");
+		$id("checkbox5").set("checked", "false");
 		var selectC = $id("checkbox6").getAttribute("checked");
 		if(selectC == "false"){
-			$id("checkbox6").setAttribute("checked", "true");
+			$id("checkbox6").set("checked", "true");
 		}
-		$id("checkbox7").setAttribute("checked", "false");
+		$id("checkbox7").set("checked", "false");
 	} else if(flipperIndex == 2){
-		$id("checkbox8").setAttribute("checked", "false");
-		$id("checkbox9").setAttribute("checked", "false");
+		$id("checkbox8").set("checked", "false");
+		$id("checkbox9").set("checked", "false");
 		var selectC = $id("checkbox10").getAttribute("checked");
 		if(selectC == "false"){
-			$id("checkbox10").setAttribute("checked", "true");
+			$id("checkbox10").set("checked", "true");
 		}
-		$id("checkbox11").setAttribute("checked", "false");
+		$id("checkbox11").set("checked", "false");
 	}
 }
 function com$layou$study$ExamTopicController$selectD(sender, args){
 	var flipperIndex = $id("flipperdefine0").get("viewindex");
 	if(flipperIndex == 0){
-		$id("checkbox0").setAttribute("checked", "false");
-		$id("checkbox1").setAttribute("checked", "false");
-		$id("checkbox2").setAttribute("checked", "false");
+		$id("checkbox0").set("checked", "false");
+		$id("checkbox1").set("checked", "false");
+		$id("checkbox2").set("checked", "false");
 		var selectD = $id("checkbox3").getAttribute("checked");
 		if(selectD == "false"){
-			$id("checkbox3").setAttribute("checked", "true");
+			$id("checkbox3").set("checked", "true");
 		}
 	} else if(flipperIndex == 1){
-		$id("checkbox4").setAttribute("checked", "false");
-		$id("checkbox5").setAttribute("checked", "false");
-		$id("checkbox6").setAttribute("checked", "false");
+		$id("checkbox4").set("checked", "false");
+		$id("checkbox5").set("checked", "false");
+		$id("checkbox6").set("checked", "false");
 		var selectC = $id("checkbox7").getAttribute("checked");
 		if(selectC == "false"){
-			$id("checkbox7").setAttribute("checked", "true");
+			$id("checkbox7").set("checked", "true");
 		}
 	} else if(flipperIndex == 2){
-		$id("checkbox8").setAttribute("checked", "false");
-		$id("checkbox9").setAttribute("checked", "false");
-		$id("checkbox10").setAttribute("checked", "false");
+		$id("checkbox8").set("checked", "false");
+		$id("checkbox9").set("checked", "false");
+		$id("checkbox10").set("checked", "false");
 		var selectD = $id("checkbox11").getAttribute("checked");
 		if(selectD == "false"){
-			$id("checkbox11").setAttribute("checked", "true");
+			$id("checkbox11").set("checked", "true");
 		}
 	}
 }
+function com$layou$study$ExamTopicController$commitPaper(sender, args){
+	comfirmCommitPaper();
+}
+function com$layou$study$ExamTopicController$changeOnKeyDown(sender, args){
+	comfirmCommitPaper();
+}
+function comfirmCommitPaper(){
+	//确认是否提交试卷
+	$alert("确定要提交试卷？");
+	//提交试卷后生成考试记录
+}
 com.layou.study.ExamTopicController.prototype = {
+    commitPaper : com$layou$study$ExamTopicController$commitPaper,
+    changeOnKeyDown : com$layou$study$ExamTopicController$changeOnKeyDown,
     selectD : com$layou$study$ExamTopicController$selectD,
     selectC : com$layou$study$ExamTopicController$selectC,
     selectB : com$layou$study$ExamTopicController$selectB,

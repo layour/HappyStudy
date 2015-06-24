@@ -37,8 +37,8 @@ valign:center;
 halign:center;
 height:44;
 color:#ffffff;
-background:#00a1ea;
 font-size:14;
+background:#00a1ea;
 width:44;
 font-family:default;
 valign:center;
@@ -62,8 +62,8 @@ valign:TOP;
 halign:LEFT;
 height:0;
 weight:1;
-background:#FFFFFF;
 layout:hbox;
+background:#FFFFFF;
 width:fill;
 valign:center;
 }
@@ -111,7 +111,7 @@ valign:center;
 halign:left;
 height:wrap;
 color:#c0c0c0;
-heightWrap:16.0;
+heightWrap:18.0;
 font-size:12;
 width:fill;
 font-family:default;
@@ -120,8 +120,8 @@ valign:center;
  #panel2 {
 halign:CENTER;
 height:1;
-layout:hbox;
 background:#c7c7c7;
+layout:hbox;
 width:fill;
 valign:top;
 }
