@@ -8,7 +8,7 @@
         <div id="panel0">
             <label id="label0">快乐学</label> 
         </div>
-        <div id="wloginpanel">
+        <div id="wloginpanel" onclick="this.loadUserInfo()">
             <div id="wuserpanel">
                 <image id="wuserimg" scaletype="fitcenter" src="fa_user.png"/>
                 <input id="wusertext" maxlength="256" placeholder="手机号" type="text"/> 

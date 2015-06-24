@@ -39,10 +39,31 @@ function com$layou$study$ExamSelectController$closeExamSelect(sender, args){
 	$view.close();
 }
 function com$layou$study$ExamSelectController$enterExamTopic(sender, args){
-	$view.open({
-		"viewid" : "com.layou.study.ExamTopic",//目标页面（首字母大写）全名，
-		"isKeep" : "true"
+	//////////////////////////////
+	//要改
+	//////////////////////////////
+	var paperId = "8a82f09b4e242686014e242686900000";
+	$service.get({
+		"url" : "http://10.2.112.27:8080/HappyStudyServer/topic/findTopicByPaper?search_paperId=" + paperId,
+		"callback" : "loadExamToticCallback()",
+		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
+}
+function loadExamToticCallback(){
+	var result = $ctx.param("result");//get和post的CallBack中获取返回结果都从result中获取
+$alert(result);
+	if(com.layou.study.GlobalUtil.isEmptyString(result)){
+		$alert("请求超时");
+		return;
+	}
+	result = $stringToJSON(result);//将字符串转换成JSON对象
+	if(result.rows.length > 0){
+		$view.open({
+			"viewid" : "com.layou.study.ExamTopic",//目标页面（首字母大写）全名，
+			"isKeep" : "true",
+			"toticData" : result
+		});
+	}
 }
 function com$layou$study$ExamSelectController$openExamHistory(sender, args){
 	$view.open({
@@ -57,7 +78,15 @@ function com$layou$study$ExamSelectController$loadUserInfo(sender, args){
 	$id("label1").setAttribute("value", userName);
 	$id("label2").setAttribute("value", teamType + "-" + teamClass + " | 中国平安培训");
 }
+function com$layou$study$ExamSelectController$popExamPaper(sender, args){
+	var jsonArgs = {
+		viewid : "panel1",
+		popgravity : "popbottom"
+	};
+	$view.openPop(jsonArgs);
+}
 com.layou.study.ExamSelectController.prototype = {
+    popExamPaper : com$layou$study$ExamSelectController$popExamPaper,
     loadUserInfo : com$layou$study$ExamSelectController$loadUserInfo,
     openExamHistory : com$layou$study$ExamSelectController$openExamHistory,
     enterExamTopic : com$layou$study$ExamSelectController$enterExamTopic,

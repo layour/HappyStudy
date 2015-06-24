@@ -56,7 +56,7 @@ function com$layou$study$LoginController$login(sender, args){
 		return;
 	}
 	$service.get({
-		"url" : "http://192.168.1.109:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : "http://10.2.112.27:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -69,7 +69,7 @@ function loginCallBack(){
 	}
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
-		$ctx.setApp(result.user)
+		$ctx.setApp(result.user);
 		$toast("登录成功");
 		$view.open({
 			"viewid" : "com.layou.study.Home",//目标页面（首字母大写）全名，
@@ -81,7 +81,13 @@ function loginCallBack(){
 		$alert("用户名或密码错误");
 	}
 }
+function com$layou$study$LoginController$loadUserInfo(sender, args){
+	var phoneNo = $ctx.getApp("phoneNo");
+	var password = $ctx.getApp("password");
+	$alert(phoneNo + password);
+}
 com.layou.study.LoginController.prototype = {
+    loadUserInfo : com$layou$study$LoginController$loadUserInfo,
     login : com$layou$study$LoginController$login,
     openRegister : com$layou$study$LoginController$openRegister,
     initialize : com$layou$study$LoginController$initialize,

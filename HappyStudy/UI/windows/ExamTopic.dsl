@@ -9,8 +9,7 @@
             <label id="label0"/>
             <input id="imagebutton3" value="交卷" istogglebutton="false" type="imagebutton" checked="false"/>
             <input id="imagebutton4" value="45:50" istogglebutton="false" type="imagebutton" checked="false"/>
-            <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/>
-            <input id="imagebutton0" value="收藏" istogglebutton="false" type="imagebutton" checked="false"/> 
+            <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/> 
         </navigatorbar>
         <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="0">
             <div id="panel0" title="页面1">
