@@ -224,25 +224,31 @@ function com$layou$study$ErrorTopicController$showAnalysis(sender, args){
 		if(valueAnalysis == "详解"){
 			$id("label6").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label6").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	} else if(flipperIndex == 1){
 		if(valueAnalysis == "详解"){
 			$id("label12").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label12").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	} else if(flipperIndex == 2){
 		if(valueAnalysis == "详解"){
 			$id("label18").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label18").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	}
 }
@@ -253,22 +259,28 @@ function com$layou$study$ErrorTopicController$loadProviousTopicFlipper(sender, a
 		var display = $id("label6").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 1){
 		var display = $id("label12").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 2){
 		var display = $id("label18").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	}
 	//加载新题目信息
@@ -284,22 +296,28 @@ function com$layou$study$ErrorTopicController$loadNextTopicFlipper(sender, args)
 		var display = $id("label6").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 1){
 		var display = $id("label12").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 2){
 		var display = $id("label18").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	}
 	//加载新题目信息

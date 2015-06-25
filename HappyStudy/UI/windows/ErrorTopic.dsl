@@ -7,7 +7,7 @@
         <navigatorbar id="navigatorbar0" class="navigatorbarclass">
             <input id="button0" class="ngbbuttonclass" onclick="this.closeErrorTopic()" type="button"/>
             <label id="label0"/>
-            <input id="imagebutton0" value="详解" istogglebutton="false" onclick="this.showAnalysis()" type="imagebutton" checked="false"/>
+            <input id="imagebutton0" value="详解" istogglebutton="true" onclick="this.showAnalysis()" type="imagebutton" checked="false"/>
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/>
             <input id="imagebutton2" value="删除" istogglebutton="false" type="imagebutton" checked="false"/> 
         </navigatorbar>

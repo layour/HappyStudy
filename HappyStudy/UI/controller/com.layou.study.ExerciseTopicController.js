@@ -56,8 +56,10 @@ function settingTopicInfo(){
 	var collect = exerciseTopic.topicRows[exerciseTopic.topicIndex].collect;
 	if(collect == 'true'){
 		$id("imagebutton2").set("value", "已收藏");
+		$id("imagebutton2").set("checked", "true");
 	} else {
 		$id("imagebutton2").set("value", "收藏");
+		$id("imagebutton2").set("checked", "false");
 	}
 	if(flipperIndex == 0){
 		//更新题目信息
@@ -119,25 +121,31 @@ function com$layou$study$ExerciseTopicController$showAnalysis(sender, args){
 		if(valueAnalysis == "详解"){
 			$id("label17").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label17").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	} else if(flipperIndex == 1){
 		if(valueAnalysis == "详解"){
 			$id("label18").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label18").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	} else if(flipperIndex == 2){
 		if(valueAnalysis == "详解"){
 			$id("label16").set("display", "block");
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		} else {
 			$id("label16").set("display", "none");
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		}
 	}
 }
@@ -260,22 +268,28 @@ function com$layou$study$ExerciseTopicController$loadNextTopicFlipper(sender, ar
 		var display = $id("label17").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 1){
 		var display = $id("label18").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 2){
 		var display = $id("label16").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	}
 	//加载新题目信息
@@ -291,22 +305,28 @@ function com$layou$study$ExerciseTopicController$loadProviousTopicFlipper(sender
 		var display = $id("label17").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 1){
 		var display = $id("label18").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	} else if(flipperIndex == 2){
 		var display = $id("label16").get("display");
 		if(display == "none"){
 			$id("imagebutton0").set("value", "详解");
+			$id("imagebutton0").set("checked", "false");
 		} else {
 			$id("imagebutton0").set("value", "收起");
+			$id("imagebutton0").set("checked", "true");
 		}
 	}
 	//加载新题目信息
@@ -322,14 +342,14 @@ function com$layou$study$ExerciseTopicController$collectTopic(sender, args){
 	if(collect == "false"){
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileSave" + params,
+			"url" : "http://10.2.112.48:8080/HappyStudyServer/collect/mobileSave" + params,
 			"callback" : "collectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
 	} else {
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileDelete" + params,
+			"url" : "http://10.2.112.48:8080/HappyStudyServer/collect/mobileDelete" + params,
 			"callback" : "reCollectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
@@ -344,6 +364,7 @@ function collectTopicCallback(){
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
 		$id("imagebutton2").set("value", "已收藏");
+		$id("imagebutton2").set("checked", "true");
 		exerciseTopic.topicRows[exerciseTopic.topicIndex].collect = "true";
 		$toast("收藏成功");
 	} else {
@@ -359,6 +380,7 @@ function reCollectTopicCallback(){
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
 		$id("imagebutton2").set("value", "收藏");
+		$id("imagebutton2").set("checked", "false");
 		exerciseTopic.topicRows[exerciseTopic.topicIndex].collect = "false";
 		$toast("取消成功");
 	} else {

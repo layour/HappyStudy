@@ -239,8 +239,11 @@ function com$layou$study$ExamTopicController$changeOnKeyDown(sender, args){
 }
 function comfirmCommitPaper(){
 	//确认是否提交试卷
-	$alert("确定要提交试卷？");
+	var flag = $confirm("确定要提交试卷？");
 	//提交试卷后生成考试记录
+	if(flag == true){
+		$view.close();
+	}
 }
 com.layou.study.ExamTopicController.prototype = {
     commitPaper : com$layou$study$ExamTopicController$commitPaper,

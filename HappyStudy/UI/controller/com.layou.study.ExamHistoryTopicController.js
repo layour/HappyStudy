@@ -56,8 +56,10 @@ function settingTopicInfo(){
 	var collect = examHistoryTopic.topicRows[examHistoryTopic.topicIndex].collect;
 	if(collect == 'true'){
 		$id("imagebutton2").set("value", "已收藏");
+		$id("imagebutton2").set("checked", "true");
 	} else {
 		$id("imagebutton2").set("value", "收藏");
+		$id("imagebutton2").set("checked", "false");
 	}
 	if(flipperIndex == 0){
 		//更新题目信息
@@ -133,14 +135,14 @@ function com$layou$study$ExamHistoryTopicController$collectTopic(sender, args){
 	if(collect == "false"){
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileSave" + params,
+			"url" : "http://10.2.112.48:8080/HappyStudyServer/collect/mobileSave" + params,
 			"callback" : "collectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
 	} else {
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://192.168.1.109:8080/HappyStudyServer/collect/mobileDelete" + params,
+			"url" : "http://10.2.112.48:8080/HappyStudyServer/collect/mobileDelete" + params,
 			"callback" : "reCollectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
@@ -155,6 +157,7 @@ function collectTopicCallback(){
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
 		$id("imagebutton2").set("value", "已收藏");
+		$id("imagebutton2").set("checked", "true");
 		examHistoryTopic.topicRows[examHistoryTopic.topicIndex].collect = "true";
 		$toast("收藏成功");
 	} else {
@@ -170,6 +173,7 @@ function reCollectTopicCallback(){
 	result = $stringToJSON(result);//将字符串转换成JSON对象
 	if('0' == result.code){
 		$id("imagebutton2").set("value", "收藏");
+		$id("imagebutton2").set("checked", "false");
 		examHistoryTopic.topicRows[examHistoryTopic.topicIndex].collect = "false";
 		$toast("取消成功");
 	} else {

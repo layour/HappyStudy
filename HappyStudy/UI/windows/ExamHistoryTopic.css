@@ -48,14 +48,15 @@ valign:center;
 icon-text-spacing:0;
 }
  #imagebutton2 {
-icon-height:32;
 halign:center;
+width:55;
+icon-width:32;
+icon-height:32;
 height:55;
 color:#FFFFFF;
 font-size:12;
-width:55;
 icon-background-image:icon_heart.png;
-icon-width:32;
+icon-pressed-image:icon_heart_touch.png;
 font-family:default;
 valign:center;
 icon-text-spacing:0;
