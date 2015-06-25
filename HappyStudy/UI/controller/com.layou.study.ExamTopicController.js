@@ -242,7 +242,10 @@ function comfirmCommitPaper(){
 	var flag = $confirm("确定要提交试卷？");
 	//提交试卷后生成考试记录
 	if(flag == true){
-		$view.close();
+		$view.open({
+			"viewid" : "com.layou.study.ExamResult",//目标页面（首字母大写）全名，
+			"isKeep" : "true"
+		});
 	}
 }
 com.layou.study.ExamTopicController.prototype = {
