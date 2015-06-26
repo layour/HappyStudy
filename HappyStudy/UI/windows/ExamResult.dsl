@@ -6,13 +6,17 @@
     <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0">
         <div id="panel0" onload="this.loadUserInfo()">
-            <input id="imagebutton0" imagebuttontype="icon" value="图标名称" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false"/>
-            <label id="label1">张三</label>
-            <label id="label2" type="multiline">导师技能提升班-20151201 | 中国平安培训</label>
-            <image id="image0" scaletype="fitcenter" src="picture"/>
+            <div id="panel2">
+                <input id="imagebutton0" imagebuttontype="icon" value="图标名称" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false"/>
+                <div id="panel3">
+                    <label id="label1">张三</label>
+                    <label id="label2" type="multiline">分数 100 | 用时 30:50</label> 
+                </div> 
+            </div>
+            <image id="image0" scaletype="fitcenter" src="icon_right.png"/>
             <div id="panel1">
-                <input id="button0" value="签到" onclick="this.clockingIn()" type="button"/>
-                <input id="button1" value="补签" type="button"/> 
+                <input id="button0" value="查看试卷" type="button"/>
+                <input id="button1" value="查看错题" type="button"/> 
             </div> 
         </div> 
     </div> 
