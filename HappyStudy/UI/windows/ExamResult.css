@@ -8,10 +8,25 @@ valign:TOP;
  #viewPage0 {
 halign:center;
 height:fill;
-layout:vbox;
 background:#F5F5F5;
+layout:vbox;
 width:fill;
 valign:TOP;
+}
+ #panel4 {
+halign:RIGHT;
+height:44;
+background:#00a1ea;
+layout:hbox;
+width:fill;
+valign:top;
+}
+ #button2 {
+margin-right:4;
+height:36;
+width:36;
+margin-top:4;
+background-image:icon_close.png;
 }
  #panel0 {
 halign:center;
@@ -24,15 +39,15 @@ valign:CENTER;
  #panel2 {
 halign:CENTER;
 height:60.0;
+widthWrap:320.0;
 background:#00a1ea;
 layout:hbox;
-width:fill;
+width:wrap;
 valign:center;
 }
  #imagebutton0 {
 width:60;
 icon-width:60;
-margin-bottom:20;
 margin-right:10;
 icon-height:60;
 height:60;
@@ -73,11 +88,11 @@ width:wrap;
 font-family:default;
 valign:top;
 }
- #image0 {
+ #Umage0 {
 height:200;
 width:200;
-margin-bottom:30;
-margin-top:30;
+margin-bottom:50;
+margin-top:50;
 }
  #panel1 {
 margin-right:20;

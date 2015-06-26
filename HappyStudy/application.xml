@@ -26,7 +26,7 @@
   <import id="gaodeMap" type="mobile" ref="component"/>  
   <import id="twoDimensionCode" type="mobile" ref="component"/>  
   <view id="NetworkErrorTopic" ref="NetworkErrorTopic.dsl" include="true"/>  
-  <view id="ExamResult" ref="ExamResult.dsl" include="true"/>
+  <view id="ExamResult" ref="ExamResult.dsl" include="true"/> 
 </application>
 <!--
 【屏幕显示方向】

@@ -34,6 +34,10 @@ function com$layou$study$ExamTopicController$initialize(){
 
 //定义查询题目结果对象
 var examTopic = new Object();
+//定义倒计时对象
+var examTimer = new Object();
+examTimer.minutes = 119;
+examTimer.seconds = 59
     
 function com$layou$study$ExamTopicController$evaljs(js){
     eval(js)
@@ -241,14 +245,40 @@ function comfirmCommitPaper(){
 	//确认是否提交试卷
 	var flag = $confirm("确定要提交试卷？");
 	//提交试卷后生成考试记录
+	var examSorce = "99";
+	var useTime = (119 - examTimer.minutes) + ":" + (59 - examTimer.seconds);
 	if(flag == true){
 		$view.open({
 			"viewid" : "com.layou.study.ExamResult",//目标页面（首字母大写）全名，
-			"isKeep" : "true"
+			"isKeep" : "false",
+			"examInfo" : {"examSorce":"分数 " + examSorce + " | 用时 " + useTime}
 		});
 	}
 }
+function com$layou$study$ExamTopicController$loadAndRunTimer(sender, args){
+	runTimer();
+}
+function runTimer(){
+	$id("imagebutton4").set("value", examTimer.minutes + ":" + examTimer.seconds)
+	if(examTimer.minutes == 0){
+		if(examTimer.seconds == 0){
+			comfirmCommitPaper();
+			return;
+		} else {
+			examTimer.seconds--;
+		}
+	} else {
+		if(examTimer.seconds == 0){
+			examTimer.minutes--;
+			examTimer.seconds = 59;
+		} else {
+			examTimer.seconds--;
+		}
+	}
+	setTimeout(runTimer, 1000);
+}
 com.layou.study.ExamTopicController.prototype = {
+    loadAndRunTimer : com$layou$study$ExamTopicController$loadAndRunTimer,
     commitPaper : com$layou$study$ExamTopicController$commitPaper,
     changeOnKeyDown : com$layou$study$ExamTopicController$changeOnKeyDown,
     selectD : com$layou$study$ExamTopicController$selectD,

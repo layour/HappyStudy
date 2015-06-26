@@ -36,13 +36,17 @@ function com$layou$study$ExamResultController$evaljs(js){
     eval(js)
 }
 function com$layou$study$ExamResultController$loadUserInfo(sender, args){
+	var data = $param.getJSONObject("examInfo");
 	var userName = $ctx.getApp("userName");
-	var teamType = $ctx.getApp("teamType");
-	var teamClass = $ctx.getApp("teamClass");
+	var examSorce = data.examSorce;
 	$id("label1").set("value", userName);
-	$id("label2").set("value", teamType + "-" + teamClass + " | 中国平安培训");
+	$id("label2").set("value", examSorce);
+}
+function com$layou$study$ExamResultController$closeExamResult(sender, args){
+	$view.close();
 }
 com.layou.study.ExamResultController.prototype = {
+    closeExamResult : com$layou$study$ExamResultController$closeExamResult,
     loadUserInfo : com$layou$study$ExamResultController$loadUserInfo,
     initialize : com$layou$study$ExamResultController$initialize,
     evaljs : com$layou$study$ExamResultController$evaljs

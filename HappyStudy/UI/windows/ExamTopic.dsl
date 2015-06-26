@@ -8,7 +8,7 @@
             <input id="button0" class="ngbbuttonclass" onclick="this.closeExamTopic()" type="button"/>
             <label id="label0"/>
             <input id="imagebutton3" value="交卷" istogglebutton="false" onclick="this.commitPaper()" type="imagebutton" checked="false"/>
-            <input id="imagebutton4" value="45:50" istogglebutton="false" type="imagebutton" checked="false"/>
+            <input id="imagebutton4" onload="this.loadAndRunTimer()" value="119:59" istogglebutton="false" type="imagebutton" checked="false"/>
             <input id="imagebutton1" value="1/100" istogglebutton="false" type="imagebutton" checked="false"/> 
         </navigatorbar>
         <flipper id="flipperdefine0" onnextflipper="this.loadNextTopicFlipper()" onload="this.loadTopicFlipper()" onpreviousflipper="this.loadProviousTopicFlipper()" viewindex="0">
