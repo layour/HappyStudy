@@ -35,8 +35,8 @@ valign:center;
  #wloginpanel {
 halign:center;
 height:190;
-layout:vbox;
 background:#ffffff;
+layout:vbox;
 width:fill;
 valign:TOP;
 }
@@ -78,7 +78,7 @@ background-image:textboxbg.png;
 }
  #wpassimg {
 height:44;
-width:48;
+width:44;
 }
  #wpasstext {
 halign:LEFT;
