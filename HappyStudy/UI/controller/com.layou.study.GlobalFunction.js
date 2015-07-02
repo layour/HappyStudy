@@ -24,7 +24,7 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	
 	var params = "?checkTime=" + data + "&checkAddr=" + $js.urlEncode(checkAddr) + "&checkType=" + $js.urlEncode(checkType) + "&userId=" + userId;
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/checkIn/mobileSave" + params,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/checkIn/mobileSave" + params,
 		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

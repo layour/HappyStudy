@@ -82,7 +82,7 @@ function com$layou$study$HomeController$enterChapterExercise(sender, args){
 function com$layou$study$HomeController$enterExerciseTopic(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/topic/findTopicByUser?search_userId=" + userId,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findTopicByUser?search_userId=" + userId,
 		"callback" : "loadExerciseToticCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -114,7 +114,7 @@ function com$layou$study$HomeController$enterNetworkErrorTopic(sender, args){
 	//////////////////////////////
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
 		"callback" : "loadNetworkErrorTopicCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -140,7 +140,7 @@ function com$layou$study$HomeController$enterMyErrorTopic(sender, args){
 	//////////////////////////////
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
 		"callback" : "loadMyErrorTopicCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -163,7 +163,7 @@ function loadMyErrorTopicCallback(){
 function com$layou$study$HomeController$enterMyCollectTopic(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findCollectByUser?search_userId=" + userId,
 		"callback" : "loadMyCollectTopicCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

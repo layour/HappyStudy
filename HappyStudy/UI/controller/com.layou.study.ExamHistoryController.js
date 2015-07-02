@@ -41,7 +41,7 @@ function com$layou$study$ExamHistoryController$closeExamHistory(sender, args){
 function com$layou$study$ExamHistoryController$loadExamHistory(sender, args){
 	var userId = $ctx.getApp("userId");
 	$service.get({
-		"url" : "http://10.2.112.56:8080/HappyStudyServer/examRecord/list?page.size=20&search_userId=" + userId,
+		"url" : "http://10.10.29.186:8080/HappyStudyServer/examRecord/list?page.size=20&search_userId=" + userId,
 		"callback" : "loadExamHistoryCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
