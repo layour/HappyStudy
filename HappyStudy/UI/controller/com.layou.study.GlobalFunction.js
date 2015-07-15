@@ -22,9 +22,10 @@ com.layou.study.GlobalFunction.scannerCallback = function(){
 	var checkType = "签到";
 	var userId = $ctx.getApp("userId");
 	
+	var url = $cache.read("url");
 	var params = "?checkTime=" + data + "&checkAddr=" + $js.urlEncode(checkAddr) + "&checkType=" + $js.urlEncode(checkType) + "&userId=" + userId;
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/checkIn/mobileSave" + params,
+		"url" : url + "/HappyStudyServer/checkIn/mobileSave" + params,
 		"callback" : "com.layou.study.GlobalFunction.checkInCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

@@ -43,8 +43,9 @@ function com$layou$study$ExamSelectController$enterExamTopic(sender, args){
 	//要改
 	//////////////////////////////
 	var paperId = "8a82f09b4e242686014e242686900000";
+	var url = $cache.read("url");
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findTopicByPaper?search_paperId=" + paperId,
+		"url" : url + "/HappyStudyServer/topic/findTopicByPaper?search_paperId=" + paperId,
 		"callback" : "loadExamToticCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

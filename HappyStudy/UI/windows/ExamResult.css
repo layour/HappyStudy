@@ -16,23 +16,25 @@ valign:TOP;
  #panel4 {
 halign:RIGHT;
 height:44;
-background:#00a1ea;
 layout:hbox;
+background:#00a1ea;
 width:fill;
 valign:top;
 }
- #button2 {
-margin-right:4;
-height:36;
-width:36;
-margin-top:4;
-background-image:icon_close.png;
+ #imagebutton1 {
+width:56;
+icon-width:25;
+icon-height:25;
+height:44;
+font-size:10;
+icon-background-image:icon_close.png;
+icon-text-spacing:3;
 }
  #panel0 {
 halign:center;
 height:fill;
-layout:vbox;
 background:#00a1ea;
+layout:vbox;
 width:fill;
 valign:CENTER;
 }
@@ -40,8 +42,8 @@ valign:CENTER;
 halign:CENTER;
 height:60.0;
 widthWrap:320.0;
-background:#00a1ea;
 layout:hbox;
+background:#00a1ea;
 width:wrap;
 valign:center;
 }
@@ -59,8 +61,8 @@ icon-text-spacing:3;
 halign:left;
 height:60.0;
 widthWrap:150.0;
-background:#00a1ea;
 layout:vbox;
+background:#00a1ea;
 width:wrap;
 valign:CENTER;
 }
@@ -82,8 +84,8 @@ height:wrap;
 widthWrap:150.0;
 color:#FFFFFF;
 heightWrap:20.0;
-background:#00a1ea;
 font-size:14;
+background:#00a1ea;
 width:wrap;
 font-family:default;
 valign:top;
@@ -98,8 +100,8 @@ margin-top:50;
 margin-right:20;
 halign:CENTER;
 height:49;
-layout:hbox;
 background:#00a1ea;
+layout:hbox;
 width:fill;
 margin-left:20;
 valign:center;

@@ -121,10 +121,11 @@ check-off-image:checkbox_a_no.png;
  #label2 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -147,10 +148,11 @@ check-off-image:checkbox_b_no.png;
  #label3 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -173,10 +175,11 @@ check-off-image:checkbox_c_no.png;
  #label4 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -199,10 +202,11 @@ check-off-image:checkbox_d_no.png;
  #label5 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -260,10 +264,11 @@ check-off-image:checkbox_a_no.png;
  #label8 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -286,10 +291,11 @@ check-off-image:checkbox_b_no.png;
  #label9 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -312,10 +318,11 @@ check-off-image:checkbox_c_no.png;
  #label10 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -338,10 +345,11 @@ check-off-image:checkbox_d_no.png;
  #label11 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -384,8 +392,7 @@ valign:top;
  #panel11 {
 margin-right:10;
 halign:LEFT;
-height:wrap;
-heightWrap:44.0;
+height:44.0;
 layout:hbox;
 width:fill;
 margin-left:10;
@@ -400,10 +407,11 @@ check-off-image:checkbox_a_no.png;
  #label14 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -426,10 +434,11 @@ check-off-image:checkbox_b_no.png;
  #label15 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -452,10 +461,11 @@ check-off-image:checkbox_c_no.png;
  #label16 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }
@@ -478,10 +488,11 @@ check-off-image:checkbox_d_no.png;
  #label17 {
 halign:left;
 height:wrap;
+weight:1;
 color:#000000;
 heightWrap:44.0;
 font-size:16;
-width:fill;
+width:0;
 font-family:default;
 valign:center;
 }

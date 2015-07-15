@@ -55,8 +55,9 @@ function com$layou$study$LoginController$login(sender, args){
 		$alert("密码不能为空");
 		return;
 	}
+	var url = $cache.read("url");
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
+		"url" : url + "/HappyStudyServer/user/login?loginName="+usercode+"&loginPwd=" + password,
 		"callback" : "loginCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

@@ -102,9 +102,10 @@ function com$layou$study$RegisterController$nextJs(sender, args){
 		$alert("推荐人手机号长度必需是11位");
 		return;
 	}
+	var url = $cache.read("url");
 	var params = "?phoneNo=" + phoneNo + "&password=" + password + "&userName=" + $js.urlEncode(userName) + "&sex=" + $js.urlEncode(sex) + "&idNo=" + idNo + "&referrerNo=" + referrerNo + "&referrerPhoneNo=" + referrerPhoneNo + "&city=" + $js.urlEncode(city) + "&teamType=" + $js.urlEncode(teamType) + "&role=" + $js.urlEncode(role) + "&teamClass=" + $js.urlEncode(teamClass)  
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/user/mobileSave" + params,
+		"url" : url + "/HappyStudyServer/user/mobileSave" + params,
 		"callback" : "registerCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -128,8 +129,9 @@ function registerCallBack(){
 	}
 }
 function com$layou$study$RegisterController$loadTeamType(sender, args){
+	var url = $cache.read("url");
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/teamClass/mobileList",
+		"url" : url + "/HappyStudyServer/teamClass/mobileList",
 		"callback" : "loadClassCallBack()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

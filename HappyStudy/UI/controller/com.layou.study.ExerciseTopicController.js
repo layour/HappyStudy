@@ -339,17 +339,18 @@ function com$layou$study$ExerciseTopicController$collectTopic(sender, args){
 	var collect = exerciseTopic.topicRows[exerciseTopic.topicIndex].collect;
 	var topicId = exerciseTopic.topicRows[exerciseTopic.topicIndex].topicId;
 	var userId = $ctx.getApp("userId");
+	var url = $cache.read("url");
 	if(collect == "false"){
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.10.29.186:8080/HappyStudyServer/collect/mobileSave" + params,
+			"url" : url + "/HappyStudyServer/collect/mobileSave" + params,
 			"callback" : "collectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});
 	} else {
 		var params = "?userId=" + userId + "&topicId=" + topicId;
 		$service.get({
-			"url" : "http://10.10.29.186:8080/HappyStudyServer/collect/mobileDelete" + params,
+			"url" : url + "/HappyStudyServer/collect/mobileDelete" + params,
 			"callback" : "reCollectTopicCallback()",
 			"timeout" : "5"//可选参数，超时时间，单位为秒
 		});

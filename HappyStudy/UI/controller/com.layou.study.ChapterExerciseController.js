@@ -40,8 +40,9 @@ function com$layou$study$ChapterExerciseController$closeChapterExercise(sender, 
 }
 function com$layou$study$ChapterExerciseController$loadChapter(sender, args){
 	var userId = $ctx.getApp("userId");
+	var url = $cache.read("url");
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/chapter/mobileList",
+		"url" : url + "/HappyStudyServer/chapter/mobileList",
 		"callback" : "loadChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});
@@ -67,8 +68,9 @@ function com$layou$study$ChapterExerciseController$enterExerciseTopic(sender, ar
 	data = $stringToJSON(data);//将字符串转换成JSON对象
 	var chapterId = data.chapterId;
 	var userId = $ctx.getApp("userId");
+	var url = $cache.read("url");
 	$service.get({
-		"url" : "http://10.10.29.186:8080/HappyStudyServer/topic/findTopicByUserChapter?search_chapterId=" + chapterId + "&search_userId=" + userId,
+		"url" : url + "/HappyStudyServer/topic/findTopicByUserChapter?search_chapterId=" + chapterId + "&search_userId=" + userId,
 		"callback" : "loadToticByChapterCallback()",
 		"timeout" : "5"//可选参数，超时时间，单位为秒
 	});

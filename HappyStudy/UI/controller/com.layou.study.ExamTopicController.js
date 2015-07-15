@@ -247,13 +247,13 @@ function comfirmCommitPaper(){
 	//提交试卷后生成考试记录
 	var examSorce = "99";
 	var useTime = (119 - examTimer.minutes) + ":" + (59 - examTimer.seconds);
-	//if(flag == true){
+	if(flag == true || flag == "true"){
 		$view.open({
 			"viewid" : "com.layou.study.ExamResult",//目标页面（首字母大写）全名，
 			"isKeep" : "false",
 			"examInfo" : {"examSorce":"分数 " + examSorce + " | 用时 " + useTime}
 		});
-	//}
+	}
 }
 function com$layou$study$ExamTopicController$loadAndRunTimer(sender, args){
 	runTimer();
