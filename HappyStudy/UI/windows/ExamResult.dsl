@@ -6,7 +6,7 @@
     <script src="#{path.controller}/com.layou.study.GlobalUtil.js" type="text/javascript"/>
     <div id="viewPage0">
         <div id="panel4">
-            <input id="imagebutton1" imagebuttontype="icon" istogglebutton="false" class="imagebuttonclass" type="imagebutton" checked="false"/> 
+            <input id="imagebutton1" imagebuttontype="icon" istogglebutton="false" class="imagebuttonclass" onclick="this.closeExamResult()" type="imagebutton" checked="false"/> 
         </div>
         <div id="panel0" onload="this.loadUserInfo()">
             <div id="panel2">

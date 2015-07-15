@@ -16,8 +16,8 @@ valign:TOP;
  #panel4 {
 halign:RIGHT;
 height:44;
-layout:hbox;
 background:#00a1ea;
+layout:hbox;
 width:fill;
 valign:top;
 }
@@ -33,8 +33,8 @@ icon-text-spacing:3;
  #panel0 {
 halign:center;
 height:fill;
-background:#00a1ea;
 layout:vbox;
+background:#00a1ea;
 width:fill;
 valign:CENTER;
 }
@@ -42,8 +42,8 @@ valign:CENTER;
 halign:CENTER;
 height:60.0;
 widthWrap:320.0;
-layout:hbox;
 background:#00a1ea;
+layout:hbox;
 width:wrap;
 valign:center;
 }
@@ -61,8 +61,8 @@ icon-text-spacing:3;
 halign:left;
 height:60.0;
 widthWrap:150.0;
-layout:vbox;
 background:#00a1ea;
+layout:vbox;
 width:wrap;
 valign:CENTER;
 }
@@ -84,8 +84,8 @@ height:wrap;
 widthWrap:150.0;
 color:#FFFFFF;
 heightWrap:20.0;
-font-size:14;
 background:#00a1ea;
+font-size:14;
 width:wrap;
 font-family:default;
 valign:top;
@@ -100,8 +100,8 @@ margin-top:50;
 margin-right:20;
 halign:CENTER;
 height:49;
-background:#00a1ea;
 layout:hbox;
+background:#00a1ea;
 width:fill;
 margin-left:20;
 valign:center;

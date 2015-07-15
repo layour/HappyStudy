@@ -36,7 +36,7 @@ function com$layou$study$WelcomePageController$evaljs(js){
     eval(js)
 }
 function com$layou$study$WelcomePageController$panel0_onload(sender, args){
-	$cache.write("url", "http://10.2.112.77:8080");
+	$cache.write("url", "http://10.2.112.97:8080");
 	setTimeout(hello, 3000);
 }
 function hello(){
